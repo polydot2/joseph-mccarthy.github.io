@@ -1,0 +1,47 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'Joseph McCarthy'
+
+theme = "default"
+summaryLength=20
+
+[params]
+  tagLine = "Developer - Dreamer - Potato"
+
+[[menu.main]]
+    name = "About"
+    weight = -100
+    identifier = "about"
+[[menu.main]]
+    name = "Projects"
+    weight = -110
+    identifier = "projects"
+[[menu.main]]
+    name = "Posts"
+    weight = -120
+    identifier = "posts"
+
+[related]
+  includeNewer = true
+  threshold = 80
+  toLower = false
+
+  [[related.indices]]
+    name = "title"
+    weight = 30
+
+  [[related.indices]]
+    name = "description"
+    weight = 30
+
+  [[related.indices]]
+    name = "category"
+    weight = 30
+
+  [[related.indices]]
+    name = "tags"
+    weight = 30
+
+  [[related.indices]]
+    name = "date"
+    weight = 10
