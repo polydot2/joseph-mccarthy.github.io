@@ -24,7 +24,7 @@
 	</main> -->
 	<div class="container">
 	<div class="row">
-		<section class="page-section portfolio col-10 " >
+		<section class="page-section portfolio {{ if .Page.Params.sidebar }} col-12 col-lg-10 {{ end }} " >
 			
 				<!-- Portfolio Section Heading-->
 				<h2 class="page-section-heading text-center text-uppercase text-secondary mt-5">{{ .Title  }}</h2>
@@ -36,9 +36,11 @@
 					{{ .Content }}
 				</div>
 						</section>
-		<section class="page-section portfolio col-2  mt-5 ">
-			
-		{{ partial "sidebar.html" . }}
+		<section class="page-section portfolio col-12 col-lg-2 mt-5 ">
+		
+			{{ if .Page.Params.sidebar }}
+				{{ partial "sidebar.html" . }}
+			{{ end }}
 	</section>
 	</div>
 </div>
