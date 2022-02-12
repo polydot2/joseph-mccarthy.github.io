@@ -4,4 +4,5 @@ date: {{ .Date }}
 draft: true
 sidebar: true
 github: ""
+hero: ""
 ---
