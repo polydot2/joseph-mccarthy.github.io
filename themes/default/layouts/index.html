@@ -13,9 +13,9 @@
 		<!-- Portfolio Grid Items-->
 		<div class="row justify-content-center">
 			<!-- Portfolio Item 1-->
-			{{  range first .Site.Params.HomeProjects (where .Site.RegularPages.ByDate.Reverse "Section" "projects") }}
+			{{  range $index, $element :=  first .Site.Params.HomeProjects (where .Site.RegularPages.ByDate.Reverse "Section" "projects") }}
 			<div class="col-md-6 col-lg-4 mb-5">
-				<div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
+				<div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#modal{{$index}}">
 					<div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
 						<div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
 					</div>
@@ -43,9 +43,9 @@
 			<div class="col-lg-4 me-auto"><p class="lead">{{.Site.Params.AboutRight}}</p></div>
 		</div>
 		<div class="text-center mt-4">
-			<a class="btn btn-xl btn-outline-light" href="{{.Site.Params.HomeButtonLink}}">
-				<i class="fas {{.Site.Params.HomeButtonIcon}} me-2"></i>
-				{{ .Site.Params.HomeButtonText }}
+			<a class="btn btn-xl btn-outline-light" href="{{.Site.Params.homebutton.link}}">
+				<i class="fas {{.Site.Params.Homebutton.icon}} me-2"></i>
+				{{ .Site.Params.Homebutton.text }}
 			</a>
 		</div>
 	</div>
