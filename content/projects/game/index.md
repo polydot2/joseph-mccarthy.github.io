@@ -2,7 +2,7 @@
 title: "Game"
 date: 2022-02-12T20:03:09Z
 draft: false
-sidebar: true
+sidebar: false
 github: ""
 hero: "game.png"
 ---

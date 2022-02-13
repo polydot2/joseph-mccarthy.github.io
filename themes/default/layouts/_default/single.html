@@ -1,8 +1,10 @@
 {{ define "main" }}
-	<div class="container">
+	<div class="container pb-5">
 	<div class="row">
 		<section class="page-section portfolio {{ if .Page.Params.sidebar }} col-12 col-lg-10 {{ end }} " >
-			
+			{{if (ne .Page.Params.Hero "") }}
+			<img class="card-img-top" src="{{.RelPermalink}}{{.Page.Params.Hero}}" alt="">
+			{{ end }}
 				<!-- Portfolio Section Heading-->
 				<h2 class="page-section-heading text-center text-uppercase text-secondary mt-5">{{ .Title  }}</h2>
 				 <!-- Icon Divider-->
