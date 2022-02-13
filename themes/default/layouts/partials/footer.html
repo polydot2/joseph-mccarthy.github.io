@@ -5,20 +5,24 @@
 			<div class="col-lg-4 mb-5 mb-lg-0">
 				<h4 class="text-uppercase mb-4">Location</h4>
 				<p class="lead mb-0">
-					{{ .Site.Params.LocationLineOne }}
+					{{ .Site.Params.Location.lineone }}
 					<br />
-					{{ .Site.Params.LocationLineTwo }}
+					{{ .Site.Params.Location.linetwo }}
 				</p>
 			</div>
 			<!-- Footer Social Icons-->
 			<div class="col-lg-4 mb-5 mb-lg-0">
+
+
+
+
 				<h4 class="text-uppercase mb-4">Around the Web</h4>
-				<a class="btn btn-outline-light btn-social mx-1" href="https://github.com/{{ .Site.Params.GitHub }}"
-					target="_blank"><i class="fab fa-fw fa-github"></i></a>
-				<a class="btn btn-outline-light btn-social mx-1" href="https://twitter.com/{{ .Site.Params.Twitter }}"
-					target="_blank"><i class="fab fa-fw fa-twitter"></i></a>
-				<!-- <a class="btn btn-outline-light btn-social mx-1" href="#!"><i
-						class="fab fa-fw fa-linkedin-in"></i></a> -->
+				
+				{{ range .Site.Params.Social }} 
+				<a class="btn btn-outline-light btn-social mx-1" href="{{.url}}"
+				target="_blank"><i class="{{.icon_pack}} fa-fw fa-{{.icon}}"></i></a>
+			  	{{end}}
+				  
 			</div>
 			<!-- Footer About Text-->
 			<div class="col-lg-4">
@@ -37,6 +41,50 @@
 </div>
 
 </body>
+
+{{ if .IsHome }}
+{{  range  $index, $element := first .Site.Params.HomeProjects (where .Site.RegularPages.ByDate.Reverse "Section" "projects") }}
+<div class="portfolio-modal modal fade" id="modal{{$index}}" tabindex="-1" aria-labelledby="modal{{$index}}" aria-hidden="true">
+	<div class="modal-dialog modal-xl">
+		<div class="modal-content">
+			<div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+			<div class="modal-body text-center pb-5">
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-lg-8">
+							<!-- Portfolio Modal - Title-->
+							<h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">{{.Title}}</h2>
+							<!-- Icon Divider-->
+							<div class="divider-custom">
+								<div class="divider-custom-line"></div>
+								<div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+								<div class="divider-custom-line"></div>
+							</div>
+							<!-- Portfolio Modal - Image-->
+							<img class="img-fluid rounded mb-5" src="{{.RelPermalink}}{{.Page.Params.Hero}}" alt="..." />
+							<!-- Portfolio Modal - Text-->
+							<p class="mb-4">{{.Summary}}</p>
+							<div class="row d-flex justify-content-between no-gutters">
+								<div class="col-6">
+								  <a href="{{.URL}}" class="btn btn-primary float-left">More</a>
+								</div>
+								<div class="col-6">
+									<button class="btn btn-secondary text-right" href="#!" data-bs-dismiss="modal">
+										<i class="fas fa-times fa-fw"></i>
+										Close Window
+									</button>
+								</div>
+							  </div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{{ end }}
+{{ end }}
 
 </html>
 
