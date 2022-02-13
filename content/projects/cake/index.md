@@ -2,7 +2,7 @@
 title: "Cake"
 date: 2022-02-12T20:02:57Z
 draft: false
-sidebar: true
+sidebar: false
 github: ""
 hero: "cake.png"
 ---
