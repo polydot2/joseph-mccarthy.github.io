@@ -8,21 +8,30 @@
 				<!-- Portfolio Section Heading-->
 				<h2 class="page-section-heading text-center text-uppercase text-secondary mt-5">{{ .Title  }}</h2>
 				 <!-- Icon Divider-->
-			<div class="divider-custom">
+			<div class="divider-custom m-0">
 				<div class="divider-custom-line"></div>
 				<div class="divider-custom-icon"><i class="fas fa-star"></i></div>
 				<div class="divider-custom-line"></div>
 			</div>
+			{{ if isset .Params "tags" -}}
+			<div class="row  mb-3 ">
+				<div class="col text-center text-nowrap ">		
+				{{ range $index, $name := sort .Params.tags -}}
+					<a class="h4" href={{ (printf "/tags/%s/" $name) | urlize }} title="{{$name | markdownify }}"><span class="badge bg-primary p-2 m-1 ">{{$name | markdownify}}</span></a>
+				{{end}}
+				</div>
+
+			</div>
+			{{ end }}
+			
 				<div class="row justify-content-left">
 					{{ .Content }}
-				</div>
-						</section>
-		<section class="page-section portfolio col-12 col-lg-2 mt-5 ">
+				</div>						</section>
+		
 		
 			{{ if .Page.Params.sidebar }}
 				{{ partial "sidebar.html" . }}
 			{{ end }}
-	</section>
 	</div>
 </div>
 

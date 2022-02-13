@@ -4,6 +4,7 @@ date: 2022-02-13T15:01:46Z
 draft: true
 sidebar: true
 hero: "cabin.png"
+tags: ["Test","Another","Tag Two"]
 ---
 
 
