@@ -1,9 +1,11 @@
 ---
 title: "Post Three"
 date: 2022-02-13T15:01:35Z
-draft: true
+draft: false
 sidebar: true
 hero: "safe.png"
+tags: ["Test","Another","Tag Two"]
+
 ---
 
 

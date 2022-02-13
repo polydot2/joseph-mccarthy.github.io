@@ -1,7 +1,7 @@
 ---
 title: "Post One"
 date: 2022-02-13T14:46:12Z
-draft: true
+draft: false
 sidebar: true
 hero: "cake.png"
 ---
