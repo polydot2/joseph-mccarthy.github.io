@@ -13,11 +13,14 @@
 			<div class="col-lg-4 ms-auto"><p class="lead">{{.Site.Params.AboutLeft}}</p></div>
 			<div class="col-lg-4 me-auto"><p class="lead">{{.Site.Params.AboutRight}}</p></div>
 		</div>
+
+		{{ if .Site.Params.homebutton }}
 		<div class="text-center mt-4">
 			<a class="btn btn-xl btn-outline-light" href="{{.Site.Params.homebutton.link}}">
 				<i class="fas {{.Site.Params.Homebutton.icon}} me-2"></i>
 				{{ .Site.Params.Homebutton.text }}
 			</a>
 		</div>
+		{{ end }}
 	</div>
 </section>
