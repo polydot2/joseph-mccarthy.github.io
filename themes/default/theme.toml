@@ -1,8 +1,8 @@
-name = "Blank"
+name = "Bootstrap Freelancer Template"
 license = "MIT"
-licenselink = "https://github.com/vimux/blank/blob/master/LICENSE"
+licenselink = "https://github.com/joseph-mccarthy/hugo-bootstrap-freelancer-template/blob/main/LICENSE"
 description = "Starter Hugo theme for developers."
-homepage = "https://github.com/vimux/blank/"
-demosite = "https://blank-demo.netlify.app/"
+homepage = "https://github.com/joseph-mccarthy/hugo-bootstrap-freelancer-template"
+demosite = "https://joseph-mccarthy.github.io/hugo-bootstrap-freelancer-template/"
 min_version = "0.20"
 
