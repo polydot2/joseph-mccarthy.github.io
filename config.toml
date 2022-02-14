@@ -1,6 +1,6 @@
 baseURL = 'https://joseph-mccarthy.github.io'
 languageCode = 'en-us'
-title = 'Start Bootstrap'
+title = 'Joseph McCarthy'
 
 theme = "freelancer"
 summaryLength=40
@@ -9,7 +9,7 @@ paginate=6
 
 
 [params]
-  tagLine = "Graphic Artist - Web Designer - Illustrator"
+  tagLine = "Developer - Dreamer - Potato"
   homePosts = 3
   homeProjects = 3
 
@@ -17,34 +17,31 @@ paginate=6
   aboutRight = "You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!"
 
 [params.location]
-  lineOne = "2215 John Daniel Drive"
-  lineTwo = "Clark, MO 65243" 
+  lineOne = "Harlow, Essex"
+  lineTwo = "United Kingdom" 
 
 [params.sbform]
       token = ""
 
-[params.homebutton]
-  text = "Free Donwload"
-  link = "https://startbootstrap.com/theme/freelancer/" 
-  icon = "fa-download"
+# [params.homebutton]
+#  text = "Free Donwload"
+#  link = "https://startbootstrap.com/theme/freelancer/" 
+#  icon = "fa-download"
 
 
 [[params.social]]
       icon      = "github" # icon name without the 'fa-'
       icon_pack = "fab"
-      url       = "#"
+      url       = "https://github.com/joseph-mccarthy"
 [[params.social]]
       icon      = "twitter" # icon name without the 'fa-'
       icon_pack = "fab"
-      url       = "#"
+      url       = "https://twitter.com/joebmccarthy"
 [[params.social]]
       icon      = "facebook" # icon name without the 'fa-'
       icon_pack = "fab"
-      url       = "#"
-[[params.social]]
-      icon      = "linkedin" # icon name without the 'fa-'
-      icon_pack = "fab"
-      url       = "#"
+      url       = "https://www.facebook.com/joebmccarthy/"
+
 
 [related]
   includeNewer = true
