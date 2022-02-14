@@ -1,6 +1,6 @@
 ---
-title: "Hugo Freelance"
-date: 2022-02-14T17:23:53Z
+title: "Night Sky Scanner"
+date: 2022-02-14T22:31:19Z
 draft: false
 sidebar: false
 tags: []

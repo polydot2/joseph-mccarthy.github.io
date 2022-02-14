@@ -1,6 +1,6 @@
 ---
-title: "Hugo Freelance"
-date: 2022-02-14T17:23:53Z
+title: "Potato Server"
+date: 2022-02-14T22:27:08Z
 draft: false
 sidebar: false
 tags: []
