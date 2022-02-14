@@ -1,7 +1,7 @@
 ---
 title: "Post Two"
 date: 2022-02-13T15:01:32Z
-draft: true
+draft: false
 sidebar: true
 hero: "submarine.png"
 ---
