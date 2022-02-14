@@ -2,7 +2,7 @@ baseURL = 'https://joseph-mccarthy.github.io'
 languageCode = 'en-us'
 title = 'Start Bootstrap'
 
-theme = "default"
+theme = "freelancer"
 summaryLength=40
 paginate=6
 

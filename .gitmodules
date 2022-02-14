@@ -1,0 +1,3 @@
+[submodule "themes/freelancer"]
+	path = themes/freelancer
+	url = git@github.com:joseph-mccarthy/hugo-bootstrap-freelancer-template.git

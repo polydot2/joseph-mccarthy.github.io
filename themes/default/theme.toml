@@ -1,8 +1,0 @@
-name = "Bootstrap Freelancer Template"
-license = "MIT"
-licenselink = "https://github.com/joseph-mccarthy/hugo-bootstrap-freelancer-template/blob/main/LICENSE"
-description = "Starter Hugo theme for developers."
-homepage = "https://github.com/joseph-mccarthy/hugo-bootstrap-freelancer-template"
-demosite = "https://joseph-mccarthy.github.io/hugo-bootstrap-freelancer-template/"
-min_version = "0.20"
-
