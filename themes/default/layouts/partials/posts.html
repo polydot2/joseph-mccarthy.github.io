@@ -1,3 +1,7 @@
+{{ $element :=  first .Site.Params.HomePosts (where .Site.RegularPages.ByDate.Reverse "Section" "posts") }}
+
+
+{{ if $element }}
 <section class="page-section portfolio py-5" id="posts">
 	<div class="container">
 		<!-- Portfolio Section Heading-->
@@ -10,7 +14,7 @@
 		</div>
 		<div class="row justify-content-left">
 			<!-- Portfolio Item 1-->
-			{{  range $index, $element :=  first .Site.Params.HomePosts (where .Site.RegularPages.ByDate.Reverse "Section" "posts") }}
+            {{ range $index, $element }}
 				<div class="col-md-4">
 					<div class="card mb-4 ">
 						<img class="card-img-top" src="{{.RelPermalink}}{{.Page.Params.Hero}}" alt="Card image cap">
@@ -33,3 +37,4 @@
 		</div>
 	</div>
 </section> 
+{{ end }}
