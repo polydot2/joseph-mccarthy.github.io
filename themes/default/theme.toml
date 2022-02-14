@@ -5,3 +5,4 @@ description = "Starter Hugo theme for developers."
 homepage = "https://github.com/vimux/blank/"
 demosite = "https://blank-demo.netlify.app/"
 min_version = "0.20"
+
