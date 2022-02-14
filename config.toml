@@ -3,7 +3,7 @@ languageCode = 'en-us'
 title = 'Start Bootstrap'
 
 theme = "default"
-summaryLength=20
+summaryLength=40
 paginate=6
 
 
@@ -20,10 +20,14 @@ paginate=6
   lineOne = "2215 John Daniel Drive"
   lineTwo = "Clark, MO 65243" 
 
+[params.sbform]
+      token = ""
+
 [params.homebutton]
   text = "Free Donwload"
   link = "https://startbootstrap.com/theme/freelancer/" 
   icon = "fa-download"
+
 
 [[params.social]]
       icon      = "github" # icon name without the 'fa-'
@@ -41,4 +45,14 @@ paginate=6
       icon      = "linkedin" # icon name without the 'fa-'
       icon_pack = "fab"
       url       = "#"
-      
+
+[related]
+  includeNewer = true
+  threshold = 80
+  toLower = false
+[[related.indices]]
+  name = 'tags'
+  weight = 100
+[[related.indices]]
+  name = 'date'
+  weight = 10

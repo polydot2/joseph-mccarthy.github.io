@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Joseph McCarthy</title>
+    <title>{{ .Site.Title }}</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <!-- Font Awesome icons (free version)-->
@@ -21,47 +21,8 @@
 
 
 <body id="page-top">
-    <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
-        <div class="container">
-            <a class="navbar-brand" href="/">{{ .Site.Title }}</a>
-            <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button"
-                data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
-                aria-expanded="false" aria-label="Toggle navigation">
-                Menu
-                <i class="fas fa-bars"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ms-auto">
-					{{ range .Site.Sections.ByTitle }}
-					<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
-						href="{{ .Permalink }}"> {{ .Title }} </a>
-			  {{end}}
-                
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- Masthead-->
-	{{ if .IsHome }}
-    <header class="masthead bg-primary text-white text-center">
-        <div class="container d-flex align-items-center flex-column">
-            <!-- Masthead Avatar Image-->
-            <img class="masthead-avatar mb-5" src="/image/avataaars.svg" alt="..." />
-            <!-- Masthead Heading-->
-            <h1 class="masthead-heading text-uppercase mb-0">{{ .Site.Title }}</h1>
-            <!-- Icon Divider-->
-            <div class="divider-custom divider-light">
-                <div class="divider-custom-line"></div>
-                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                <div class="divider-custom-line"></div>
-            </div>
-            <!-- Masthead Subheading-->
-            <p class="masthead-subheading font-weight-light mb-0">{{ .Site.Params.TagLine }}</p>
-        </div>
-    </header>
-	{{ else }}
-	<header class="masthead2 text-white text-center"></header>
-	{{ end }}
+    {{ partial "navigation.html" . }}
+    {{ partial "hero.html" . }}
+
 
 	
