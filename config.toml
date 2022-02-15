@@ -13,8 +13,8 @@ paginate=6
   homePosts = 3
   homeProjects = 3
 
-  aboutLeft = "Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional SASS stylesheets for easy customization."
-  aboutRight = "You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!"
+  aboutLeft = "I'm a full time developer which is mostly around Java and DevOps. I'm also a father of a little boy, who keeps me active and on my toes. I'm counting it as exercise, because I need it."
+  aboutRight = "Out of work my interests vary. I enjoy taking pictures, and generally spending time outdoors walking. I have created this site so I can keep track of what I'm up to and focus more on trying to get some Open Source projects running."
 
 [params.location]
   lineOne = "Harlow, Essex"
