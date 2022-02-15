@@ -23,24 +23,10 @@ paginate=6
 [params.sbform]
       token = ""
 
-# [params.homebutton]
-#  text = "Free Donwload"
-#  link = "https://startbootstrap.com/theme/freelancer/" 
-#  icon = "fa-download"
-
-
 [[params.social]]
       icon      = "github" # icon name without the 'fa-'
       icon_pack = "fab"
       url       = "https://github.com/joseph-mccarthy"
-[[params.social]]
-      icon      = "twitter" # icon name without the 'fa-'
-      icon_pack = "fab"
-      url       = "https://twitter.com/joebmccarthy"
-[[params.social]]
-      icon      = "facebook" # icon name without the 'fa-'
-      icon_pack = "fab"
-      url       = "https://www.facebook.com/joebmccarthy/"
 
 
 [related]
