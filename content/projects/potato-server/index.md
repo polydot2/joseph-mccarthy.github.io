@@ -1,7 +1,7 @@
 ---
 title: "Potato Server"
 date: 2022-02-14T22:27:08Z
-draft: false
+draft: true
 sidebar: false
 tags: []
 hero: "hero.png"

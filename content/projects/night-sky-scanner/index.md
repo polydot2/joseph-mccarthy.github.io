@@ -1,7 +1,7 @@
 ---
 title: "Night Sky Scanner"
 date: 2022-02-14T22:31:19Z
-draft: false
+draft: true
 sidebar: false
 tags: []
 hero: "hero.png"
