@@ -5,5 +5,6 @@ draft: false
 sidebar: false
 tags: []
 hero: "hero.png"
-summary: "Arcu a enim duis vestibulum a elit a eros ut placerat tempor suspendisse a non id a vestibulum a suspendisse adipiscing ullamcorper velit sociosqu himenaeos quisque pulvinar imperdiet.Nostra enim parturient eu pharetra condimentum consequat odio vestibulum adipiscing a sociosqu."
+summary: Small and simple application to keep my ISP honest. It's written in Python made up of two components. First component is the speed test which is run every 30 minutes using speedtest.net cli and stores the result in a database. The second component is a simple API that allows a client of choice to pull the data.
 ---
+
