@@ -1,7 +1,7 @@
 ---
 title: "Second Project Released"
 date: 2022-02-25T12:58:21Z
-draft: false
+draft: true
 sidebar: true
 tags: []
 hero: "hero.png"

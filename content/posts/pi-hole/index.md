@@ -1,7 +1,7 @@
 ---
 title: "Pi-hole"
 date: 2022-02-20T22:33:23Z
-draft: false
+draft: true
 sidebar: true
 tags: []
 hero: "hero.png"
