@@ -1,1 +1,1 @@
-## My Hugo Site
+## My Hugo Site for Blog
