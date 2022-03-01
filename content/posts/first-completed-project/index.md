@@ -5,7 +5,7 @@ draft: false
 sidebar: true
 tags: [Project, Python]
 hero: "hero.png"
-summary: I've completed my first project and it's up on GitHub, for all to see. This is a big deal, I never finish anything.
+summary: I've completed my first project. This is a big deal, I never finish anything.
 ---
 
 So anyone that knows me, would be able to tell you that I generally start a lot of different projects. Then I get bogged down, bored and then move onto something else. Leaving the initial idea and code base to die.
