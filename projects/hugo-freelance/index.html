@@ -3,7 +3,7 @@
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta http-equiv=x-ua-compatible content="IE=edge">
-<title>Internet Monitor</title>
+<title>Hugo Freelance</title>
 <link rel=stylesheet href=/css/style.css>
 </head>
 <body>
@@ -40,8 +40,8 @@ Menu
 <div class="container pb-5">
 <div class=row>
 <section class="page-section portfolio">
-<img class=card-img-top src=https://joseph-mccarthy.github.io/projects/internet-monitor/hero.png alt>
-<h2 class="page-section-heading text-center text-uppercase text-secondary mt-5">Internet Monitor</h2>
+<img class=card-img-top src=https://joseph-mccarthy.github.io/projects/hugo-freelance/hero.png alt>
+<h2 class="page-section-heading text-center text-uppercase text-secondary mt-5">Hugo Freelance</h2>
 <div class="divider-custom m-0">
 <div class=divider-custom-line></div>
 <div class=divider-custom-icon><i class="fas fa-star"></i></div>
@@ -49,86 +49,42 @@ Menu
 </div>
 <div class="row mb-3">
 <div class="col text-center text-nowrap">
-<a class=h4 href=/tags/docker/ title=Docker><span class="badge bg-primary p-2 m-1">Docker</span></a>
-<a class=h4 href=/tags/flask/ title=Flask><span class="badge bg-primary p-2 m-1">Flask</span></a>
-<a class=h4 href=/tags/infrastructure/ title=Infrastructure><span class="badge bg-primary p-2 m-1">Infrastructure</span></a>
-<a class=h4 href=/tags/python/ title=Python><span class="badge bg-primary p-2 m-1">Python</span></a>
-<a class=h4 href=/tags/sqlalchemy/ title=SqlAlchemy><span class="badge bg-primary p-2 m-1">SqlAlchemy</span></a>
+<a class=h4 href=/tags/bootstrap/ title=Bootstrap><span class="badge bg-primary p-2 m-1">Bootstrap</span></a>
+<a class=h4 href=/tags/freelancer/ title=Freelancer><span class="badge bg-primary p-2 m-1">Freelancer</span></a>
+<a class=h4 href=/tags/hugo/ title=Hugo><span class="badge bg-primary p-2 m-1">Hugo</span></a>
+<a class=h4 href=/tags/theme/ title=Theme><span class="badge bg-primary p-2 m-1">Theme</span></a>
 </div>
 </div>
 <div class="row justify-content-left">
-<p>I rather like the idea of keeping my Internet Service Provider honest with the service that they claim to be providing me. They charge enough for the service and it&rsquo;s not always apprant that we&rsquo;re getting it. So I created this project for my own need. It&rsquo;s been published to <a href=https://github.com/joseph-mccarthy/internet-monitor>GitHub.</a> I&rsquo;m very pleased that I was able to finall finished something, I also have a little post in my blog about the project <a href=https://joseph-mccarthy.github.io/posts/first-completed-project/ title="Internet Monitor Done">Blog</a>.</p>
-<p>I basically wanted a speed test of my internet connection to run every 30 minutes and have that information stored so I can query it later and possibly see when there are times that speeds flucate. This information would probably be useful when I start pumping data to sync storage servers.</p>
-<p>I know that there are many solutions out there that can provide this information, and can create dashboards. But I didn&rsquo;t want the restrictions of having to use those front ends or dashboards. So I decided that it would be made of two parts.</p>
-<p>The fist part is just a simple python script that runs every 30 minutes that calls upon the <a href=https://www.speedtest.net/apps/cli>speed test cli</a> to perform the speed test and then persist that in a sqlite database. The second component is the webservice that I can call on to get the results and other data. This again was written in python using flask.</p>
-<p>The API exposes three endpoints for the data saved in the database</p>
-<p> 
- </p>
-<h5 id=latest>/latest</h5>
+<p>This repository contains a <a href=https://github.com/gohugoio>Hugo</a> theme that is based on the <a href=https://getbootstrap.com/>Bootstrap</a> Freelancer template. I created this Hugo theme as I have always liked the <a href=https://github.com/StartBootstrap/startbootstrap-freelancer>Freelancer</a> Bootstrap template, and my preference for Hugo for static site generation made it a no brainer to me. As the origional Freelancer theme was a single page template, I have used some creative licence when it comes to the post listing pages, and content pages. If you have any suggestions on how it can be made better, please commit. To see an example of a site running it? Well you are as my site has been built with this template. You can also see the repository for the Hugo/Freelance theme <a href=https://github.com/joseph-mccarthy/hugo-bootstrap-freelancer-template>here.</a></p>
+<h2 id=how-to-use>How To Use</h2>
+<hr>
+<p>You can use this theme like you would with any Hugo theme. The generally accepted way of using themes is to install them as a git sub module so you&rsquo;re able to keep them upto date with the theme repository.</p>
 <div class=highlight><div style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
 <table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
 <pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=1><a style=outline:none;text-decoration:none;color:inherit href=#1>1</a>
 </span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=2><a style=outline:none;text-decoration:none;color:inherit href=#2>2</a>
 </span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=3><a style=outline:none;text-decoration:none;color:inherit href=#3>3</a>
 </span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=4><a style=outline:none;text-decoration:none;color:inherit href=#4>4</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=5><a style=outline:none;text-decoration:none;color:inherit href=#5>5</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=6><a style=outline:none;text-decoration:none;color:inherit href=#6>6</a>
 </span></code></pre></td>
 <td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
-<pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json>{
-    <span style=color:#062873;font-weight:700>&#34;download&#34;</span>: <span style=color:#40a070>3296755.0</span>,
-    <span style=color:#062873;font-weight:700>&#34;upload&#34;</span>: <span style=color:#40a070>2175216.0</span>,
-    <span style=color:#062873;font-weight:700>&#34;ping&#34;</span>: <span style=color:#40a070>62.496</span>,
-    <span style=color:#062873;font-weight:700>&#34;time&#34;</span>: <span style=color:#40a070>1645789388.759391</span>
-}
-</code></pre></td></tr></table>
+<pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-console data-lang=console><span style=color:#c65d09;font-weight:700># </span>inside your hugo directory clone this repository as a sub module
+<span style=color:#888>git submodule add https://github.com/joseph-mccarthy/hugo-bootstrap-freelancer-template themes/freelancer
+</span><span style=color:#888></span><span style=color:#c65d09;font-weight:700># </span>update your config to use new themem
+<span style=color:#888>echo theme = \&#34;freelancer\&#34; &gt;&gt; config.toml
+</span></code></pre></td></tr></table>
 </div>
-</div><p> 
- </p>
-<h5 id=last-day>/last-day</h5>
+</div><p>This theme also comes with it&rsquo;s own default content type, and should be used also along with the idea of bundles. Here is an example command on how to use the default content type</p>
 <div class=highlight><div style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
 <table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
-<pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=1><a style=outline:none;text-decoration:none;color:inherit href=#1> 1</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=2><a style=outline:none;text-decoration:none;color:inherit href=#2> 2</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=3><a style=outline:none;text-decoration:none;color:inherit href=#3> 3</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=4><a style=outline:none;text-decoration:none;color:inherit href=#4> 4</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=5><a style=outline:none;text-decoration:none;color:inherit href=#5> 5</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=6><a style=outline:none;text-decoration:none;color:inherit href=#6> 6</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=7><a style=outline:none;text-decoration:none;color:inherit href=#7> 7</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=8><a style=outline:none;text-decoration:none;color:inherit href=#8> 8</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=9><a style=outline:none;text-decoration:none;color:inherit href=#9> 9</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=10><a style=outline:none;text-decoration:none;color:inherit href=#10>10</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=11><a style=outline:none;text-decoration:none;color:inherit href=#11>11</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=12><a style=outline:none;text-decoration:none;color:inherit href=#12>12</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=13><a style=outline:none;text-decoration:none;color:inherit href=#13>13</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=14><a style=outline:none;text-decoration:none;color:inherit href=#14>14</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=15><a style=outline:none;text-decoration:none;color:inherit href=#15>15</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=16><a style=outline:none;text-decoration:none;color:inherit href=#16>16</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=17><a style=outline:none;text-decoration:none;color:inherit href=#17>17</a>
+<pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=1><a style=outline:none;text-decoration:none;color:inherit href=#1>1</a>
 </span></code></pre></td>
 <td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
-<pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json>{
-    <span style=color:#062873;font-weight:700>&#34;download&#34;</span>: {
-        <span style=color:#062873;font-weight:700>&#34;high&#34;</span>: <span style=color:#40a070>3852744.0</span>,
-        <span style=color:#062873;font-weight:700>&#34;average&#34;</span>: <span style=color:#40a070>3629769.4166666665</span>,
-        <span style=color:#062873;font-weight:700>&#34;low&#34;</span>: <span style=color:#40a070>3296755.0</span>
-    },
-    <span style=color:#062873;font-weight:700>&#34;upload&#34;</span>: {
-        <span style=color:#062873;font-weight:700>&#34;high&#34;</span>: <span style=color:#40a070>2331189.0</span>,
-        <span style=color:#062873;font-weight:700>&#34;average&#34;</span>: <span style=color:#40a070>1883408.0416666667</span>,
-        <span style=color:#062873;font-weight:700>&#34;low&#34;</span>: <span style=color:#40a070>1215527.0</span>
-    },
-    <span style=color:#062873;font-weight:700>&#34;ping&#34;</span>: {
-        <span style=color:#062873;font-weight:700>&#34;high&#34;</span>: <span style=color:#40a070>62.496</span>,
-        <span style=color:#062873;font-weight:700>&#34;average&#34;</span>: <span style=color:#40a070>16.989</span>,
-        <span style=color:#062873;font-weight:700>&#34;low&#34;</span>: <span style=color:#40a070>12.594</span>
-    }
-}
-</code></pre></td></tr></table>
+<pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-console data-lang=console><span style=color:#888>hugo new --kind default posts/my-post
+</span></code></pre></td></tr></table>
 </div>
-</div><p> 
- </p>
-<h5 id=graph>/graph</h5>
+</div><p>This content type has some font matter that you&rsquo;ll be able to make use of as it&rsquo;s using bundles. There is a field named &ldquo;hero&rdquo; which would be the path to the banner image of the post, this image is also used in the post listing pages. The &ldquo;sidebar&rdquo; field states if to show the post as full width or with the meta sidebar which will show related posts and last 5 publised posts.</p>
+<p>There are also some extra paramters that should be added to your config.toml in order to use the theme to it&rsquo;s full.</p>
 <div class=highlight><div style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
 <table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
 <pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=1><a style=outline:none;text-decoration:none;color:inherit href=#1> 1</a>
@@ -163,68 +119,52 @@ Menu
 </span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=30><a style=outline:none;text-decoration:none;color:inherit href=#30>30</a>
 </span></code></pre></td>
 <td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
-<pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json>[
-    {
-        <span style=color:#062873;font-weight:700>&#34;id&#34;</span>: <span style=color:#40a070>1</span>,
-        <span style=color:#062873;font-weight:700>&#34;download&#34;</span>: <span style=color:#40a070>3364494.0</span>,
-        <span style=color:#062873;font-weight:700>&#34;upload&#34;</span>: <span style=color:#40a070>1085589.0</span>,
-        <span style=color:#062873;font-weight:700>&#34;ping&#34;</span>: <span style=color:#40a070>15.426</span>,
-        <span style=color:#062873;font-weight:700>&#34;time&#34;</span>: <span style=color:#40a070>1645710501.983828</span>
-    },
-    {
-        <span style=color:#062873;font-weight:700>&#34;id&#34;</span>: <span style=color:#40a070>2</span>,
-        <span style=color:#062873;font-weight:700>&#34;download&#34;</span>: <span style=color:#40a070>3330109.0</span>,
-        <span style=color:#062873;font-weight:700>&#34;upload&#34;</span>: <span style=color:#40a070>822428.0</span>,
-        <span style=color:#062873;font-weight:700>&#34;ping&#34;</span>: <span style=color:#40a070>17.148</span>,
-        <span style=color:#062873;font-weight:700>&#34;time&#34;</span>: <span style=color:#40a070>1645712303.276396</span>
-    },
-    {
-        <span style=color:#062873;font-weight:700>&#34;id&#34;</span>: <span style=color:#40a070>3</span>,
-        <span style=color:#062873;font-weight:700>&#34;download&#34;</span>: <span style=color:#40a070>3316571.0</span>,
-        <span style=color:#062873;font-weight:700>&#34;upload&#34;</span>: <span style=color:#40a070>1076903.0</span>,
-        <span style=color:#062873;font-weight:700>&#34;ping&#34;</span>: <span style=color:#40a070>15.835</span>,
-        <span style=color:#062873;font-weight:700>&#34;time&#34;</span>: <span style=color:#40a070>1645714140.544144</span>
-    },
-    {
-        <span style=color:#062873;font-weight:700>&#34;id&#34;</span>: <span style=color:#40a070>4</span>,
-        <span style=color:#062873;font-weight:700>&#34;download&#34;</span>: <span style=color:#40a070>3261149.0</span>,
-        <span style=color:#062873;font-weight:700>&#34;upload&#34;</span>: <span style=color:#40a070>1134400.0</span>,
-        <span style=color:#062873;font-weight:700>&#34;ping&#34;</span>: <span style=color:#40a070>15.76</span>,
-        <span style=color:#062873;font-weight:700>&#34;time&#34;</span>: <span style=color:#40a070>1645715986.757451</span>
-    }
-]
+<pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml>[params]
+  tagLine = <span style=color:#4070a0>&#34;Graphic Artist - Web Designer - Illustrator&#34;</span>
+  homePosts = <span style=color:#40a070>3</span>
+  homeProjects = <span style=color:#40a070>3</span>
+
+  aboutLeft = <span style=color:#4070a0>&#34;Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional SASS stylesheets for easy customization.&#34;</span>
+  aboutRight = <span style=color:#4070a0>&#34;You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!&#34;</span>
+
+[params.location]
+  lineOne = <span style=color:#4070a0>&#34;2215 John Daniel Drive&#34;</span>
+  lineTwo = <span style=color:#4070a0>&#34;Clark, MO 65243&#34;</span> 
+
+[params.sbform]
+      token = <span style=color:#4070a0>&#34;&#34;</span>
+
+[params.homebutton]
+  text = <span style=color:#4070a0>&#34;Free Donwload&#34;</span>
+  link = <span style=color:#4070a0>&#34;https://startbootstrap.com/theme/freelancer/&#34;</span> 
+  icon = <span style=color:#4070a0>&#34;fa-download&#34;</span>
+
+[related]
+  includeNewer = <span style=color:#007020;font-weight:700>true</span>
+  threshold = <span style=color:#40a070>80</span>
+  toLower = <span style=color:#007020;font-weight:700>false</span>
+[[related.indices]]
+  name = <span style=color:#4070a0>&#39;tags&#39;</span>
+  weight = <span style=color:#40a070>100</span>
+[[related.indices]]
+  name = <span style=color:#4070a0>&#39;date&#39;</span>
+  weight = <span style=color:#40a070>10</span>
 </code></pre></td></tr></table>
 </div>
-</div><p> 
- </p>
-<h3 id=docker>Docker</h3>
-<p>There is also a provided Docker image that runs both the speed test and the api with an exposed port of <strong>5000</strong></p>
-<div class=highlight><div style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
-<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
-<pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=1><a style=outline:none;text-decoration:none;color:inherit href=#1>1</a>
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f" id=2><a style=outline:none;text-decoration:none;color:inherit href=#2>2</a>
-</span></code></pre></td>
-<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
-<pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>docker pull joemccarthy/internet-monitor:latest
-docker run -d -p 5000:5000 joemccarthy/internet-monitor:latest
-</code></pre></td></tr></table>
-</div>
-</div><p> 
- </p>
-<h3 id=technologies>Technologies</h3>
+</div><p>There are also some assumptions made on the content structure for this theme. I have created this with the idea of two areas <strong>posts</strong> and <strong>projects</strong> which will drive the menu, home page and content listing areas.</p>
+<h2 id=references>References</h2>
 <ul>
-<li>Python</li>
-<li>Flask</li>
-<li>SqlAlchemy</li>
-<li>Docker</li>
-<li><a href=https://www.speedtest.net/apps/cli>Speedtest.net CLI</a></li>
+<li><a href=https://github.com/gohugoio>Hugo</a></li>
+<li><a href=https://getbootstrap.com/>Bootstrap</a></li>
+<li><a href=https://github.com/StartBootstrap/startbootstrap-freelancer>Bootstrap Freelancer</a></li>
+<li><a href=https://startbootstrap.com/solution/contact-forms>Bootstrap Forms</a></li>
 </ul>
 <div class="row mt-5 mb-3">
 <div class="col-6 text-left">
-<a class="btn btn-light btn-lg col-12 disabled" href=#><span class=h1>&#8592;</span></a>
+<a class="btn btn-primary btn-lg col-12" href=https://joseph-mccarthy.github.io/projects/internet-monitor/><span class=h1>&#8592;</span></a>
 </div>
 <div class="col-6 text-right">
-<a class="btn btn-primary btn-lg col-12" href=https://joseph-mccarthy.github.io/projects/hugo-freelance/><span class=h1>&#8594;</span></a>
+<a class="btn btn-light disabled btn-lg col-12" href=#><span class=h1>&#8594;</span></a>
 </div>
 </div>
 </div> </section>
