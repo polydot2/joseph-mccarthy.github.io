@@ -1,6 +1,6 @@
 ---
 title: "Second Project Released"
-date: 2022-02-25T12:58:21Z
+date: 2022-03-01T12:58:21Z
 draft: false
 sidebar: true
 tags: [Project, Hugo, Bootstrap]

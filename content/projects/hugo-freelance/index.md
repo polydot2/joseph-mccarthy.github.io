@@ -1,6 +1,6 @@
 ---
 title: "Hugo Freelance"
-date: 2022-02-14T17:23:53Z
+date: 2022-03-01T17:23:53Z
 draft: false
 sidebar: false
 tags: [Bootstrap, Freelancer, Hugo, Theme]
