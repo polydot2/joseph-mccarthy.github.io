@@ -3,9 +3,8 @@
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta http-equiv=x-ua-compatible content="IE=edge">
-<title>Flask</title>
+<title>Pi-hole</title>
 <link rel=stylesheet href=/css/style.css>
-<link rel=alternate type=application/rss+xml href=/tags/flask/index.xml title="Joseph McCarthy">
 </head>
 <body>
 <head>
@@ -38,48 +37,78 @@ Menu
 </div>
 </nav>
 <header class="masthead2 text-white text-center"></header>
-<section class="page-section portfolio" id=portfolio>
-<div class=container>
-<h2 class="page-section-heading text-center text-uppercase text-secondary mt-5">Flask</h2>
-<div class=divider-custom>
+<div class="container pb-5">
+<div class=row>
+<section class="page-section portfolio col-12 col-lg-10">
+<img class=card-img-top src=https://joseph-mccarthy.github.io/posts/pi-hole/hero.png alt>
+<h2 class="page-section-heading text-center text-uppercase text-secondary mt-5">Pi-hole</h2>
+<div class="divider-custom m-0">
 <div class=divider-custom-line></div>
 <div class=divider-custom-icon><i class="fas fa-star"></i></div>
 <div class=divider-custom-line></div>
 </div>
+<div class="row mb-3">
+<div class="col text-center text-nowrap">
+<a class=h4 href=/tags/infrastructure/ title=Infrastructure><span class="badge bg-primary p-2 m-1">Infrastructure</span></a>
+<a class=h4 href=/tags/network/ title=Network><span class="badge bg-primary p-2 m-1">Network</span></a>
+<a class=h4 href=/tags/pi-hole/ title="Pi Hole"><span class="badge bg-primary p-2 m-1">Pi Hole</span></a>
+<a class=h4 href=/tags/rasberry-pi/ title="Rasberry Pi"><span class="badge bg-primary p-2 m-1">Rasberry Pi</span></a>
+</div>
+</div>
 <div class="row justify-content-left">
-<div class=col-md-4>
-<div class="card mb-4">
-<a href=/projects/internet-monitor/><img class=card-img-top src=https://joseph-mccarthy.github.io/projects/internet-monitor/hero.png alt="Card image cap"></a>
-<div class=card-body>
-<h5 class=card-title>Internet Monitor</h5>
-<p class="card-text text-center">Small and simple application to keep my ISP honest.</p>
+<p>So I finally got my hands on a Raspberry Pi, thanks to a work friend who wasn&rsquo;t using it at the time. So once I had it sent over I knew what I wanted to do with it first. I wanted to install Pi-Hole. The amount of advertising and tracking on the internet really bothers me it&rsquo;s not even the stuff that you see, it&rsquo;s the requests that you don&rsquo;t.</p>
+<p>For example if a site says hey here&rsquo;s an advert well, I&rsquo;m kinda ok with that. However a site that just takes my viewing data, and just sells that off to the highest bidder does bother me.</p>
+<p>So like all Raspberry Pi projects it started with the flashing of an SD card with Raspberian OS lite, I don&rsquo;t need a Desktop experience for this project just ssh will do. Once in it was a simple onliner to get the installer going for Pi-Hole.</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-console data-lang=console><span style=color:#888>curl -sSL https://install.pi-hole.net | bash
+</span></code></pre></div><p>Then you&rsquo;re just guided through the steps to setting up Pi-Hole, simple.</p>
+<h2 id=post-install>Post Install</h2>
+<p>Once the installer has been run, you will need to configure your router to have DHCP clients use Pi-hole as their DNS server which ensures that all devices connecting to your network will have content blocked without any further intervention.</p>
+<p>If your router does not support setting the DNS server, you can use Pi-hole&rsquo;s built-in DHCP server; be sure to disable DHCP on your router first. This was the case for my as my Internet Service Provider is Virgin, and what you&rsquo;re able to configure on their modem/router is rather limited.</p>
+<div class="row mt-5 mb-3">
+<div class="col-6 text-left">
+<a class="btn btn-light btn-lg col-12 disabled" href=#><span class=h1>&#8592;</span></a>
 </div>
-<div class=card-footer>
-<div class="d-flex justify-content-between align-items-center">
-<small class=text-muted>2 minutes</small>
-<div class=btn-group>
-<a href=/projects/internet-monitor/ class="btn btn-lg btn-primary">Read More</a>
+<div class="col-6 text-right">
+<a class="btn btn-primary btn-lg col-12" href=https://joseph-mccarthy.github.io/posts/second-project-released/><span class=h1>&#8594;</span></a>
 </div>
 </div>
-</div>
-</div>
-</div>
-<div class="col-12 p-3">
-<div class="d-flex justify-content-center"><nav aria-label="Page navigation example ">
-<ul class="pagination justify-content-center pagination-lg">
-<li class="page-item disabled">
-<a class="page-link bg-light" href=# tabindex=-1><span class=h2>&#8592;</span></a>
+</div> </section>
+<section class="page-section portfolio col-12 col-lg-2 my-3">
+<div id=sidebar class=fixed>
+<div class="widget pt-3">
+<h4 class="mb-3 widget-title">Latest Posts</h4>
+<ul class=list-unstyled>
+<li class="d-flex my-1">
+<a href=https://joseph-mccarthy.github.io/posts/second-project-released/>
+<h5>Second Project Released</h5>
+</a>
 </li>
-<li class="page-item disabled">
-<a class="page-link bg-light" href=#><span class=h2>&#8594;</span></a>
+<li class="d-flex my-1">
+<a href=https://joseph-mccarthy.github.io/posts/first-completed-project/>
+<h5>First Completed Project</h5>
+</a>
+</li>
+<li class="d-flex my-1">
+<a href=https://joseph-mccarthy.github.io/posts/hello-world/>
+<h5>Hello World</h5>
+</a>
 </li>
 </ul>
-</nav>
 </div>
-</div>
+<div class="widget pt-3">
+<h4 class="mb-3 widget-title">Related Posts</h4>
+<ul class=list-unstyled>
+<li class="d-flex my-1">
+<a href=https://joseph-mccarthy.github.io/projects/internet-monitor/>
+<h5>Internet Monitor</h5>
+</a>
+</li>
+</ul>
 </div>
 </div>
 </section>
+</div>
+</div>
 <footer class="footer text-center">
 <div class=container>
 <div class=row>
