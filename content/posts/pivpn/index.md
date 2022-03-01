@@ -1,9 +1,9 @@
 ---
 title: "PiVPN"
 date: 2022-02-20T22:34:42Z
-draft: true
+draft: false
 sidebar: true
-tags: []
+tags: [Rasberry Pi, Infrastructure, Network, PiVPN]
 hero: "hero.png"
-summary: "Arcu a enim duis vestibulum a elit a eros ut placerat tempor suspendisse a non id a vestibulum a suspendisse adipiscing ullamcorper velit sociosqu himenaeos quisque pulvinar imperdiet.Nostra enim parturient eu pharetra condimentum consequat odio vestibulum adipiscing a sociosqu."
+summary: As I'm setting up my network for future things, I really need need a VPN
 ---

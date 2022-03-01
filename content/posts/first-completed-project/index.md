@@ -1,9 +1,9 @@
 ---
 title: "First Completed Project"
 date: 2022-02-14T22:50:55Z
-draft: true
+draft: false
 sidebar: true
-tags: [Announcement,Moment]
+tags: [Project, Python]
 hero: "hero.png"
-summary: Arcu a enim duis vestibulum a elit a eros ut placerat tempor suspendisse a non id a vestibulum a suspendisse adipiscing ullamcorper velit sociosqu himenaeos quisque pulvinar imperdiet.Nostra enim parturient eu pharetra condimentum consequat odio vestibulum adipiscing a sociosqu.
+summary: I've completed my first project and it's up on GitHub, for all to see. This is a big deal, I never finish anything.
 ---
