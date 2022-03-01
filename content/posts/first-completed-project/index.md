@@ -1,7 +1,7 @@
 ---
 title: "First Completed Project"
 date: 2022-02-14T22:50:55Z
-draft: false
+draft: true
 sidebar: true
 tags: [Project, Python]
 hero: "hero.png"

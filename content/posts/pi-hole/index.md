@@ -1,7 +1,7 @@
 ---
 title: "Pi-hole"
 date: 2022-02-20T22:33:23Z
-draft: False
+draft: true
 sidebar: true
 tags: [Rasberry Pi, Infrastructure, Network, Pi Hole]
 hero: "hero.png"
