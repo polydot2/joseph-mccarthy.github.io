@@ -19,9 +19,16 @@ The small service deployed to the device will have single endpoint at the moment
 ```json
 {
     "load":{
-        "minute":0.43,
-        "five-minutes":0.2,
-        "fithteen-minutes":2.3
+        "native" : {
+            "minute":0.43,
+            "five-minutes":0.2,
+            "fithteen-minutes":2.3
+        },
+        "core" : {
+            "minute":0.01,
+            "five-minutes":0.01,
+            "fithteen-minutes":0.5
+        }
     },
     "memory":{
         "total": 4294967296,
