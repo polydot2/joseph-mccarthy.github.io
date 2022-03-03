@@ -1,5 +1,5 @@
 ---
-title: "Health Checker Dev Log"
+title: "Health Check Dev Log"
 date: 2022-03-01T21:07:27Z
 draft: false
 sidebar: true
