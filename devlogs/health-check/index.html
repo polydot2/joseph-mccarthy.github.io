@@ -66,13 +66,13 @@ Menu
     <span style=color:#062873;font-weight:700>&#34;load&#34;</span>:{
         <span style=color:#062873;font-weight:700>&#34;native&#34;</span> : {
             <span style=color:#062873;font-weight:700>&#34;minute&#34;</span>:<span style=color:#40a070>0.43</span>,
-            <span style=color:#062873;font-weight:700>&#34;five-minutes&#34;</span>:<span style=color:#40a070>0.2</span>,
-            <span style=color:#062873;font-weight:700>&#34;fithteen-minutes&#34;</span>:<span style=color:#40a070>2.3</span>
+            <span style=color:#062873;font-weight:700>&#34;fiveMinutes&#34;</span>:<span style=color:#40a070>0.2</span>,
+            <span style=color:#062873;font-weight:700>&#34;fithteenMinutes&#34;</span>:<span style=color:#40a070>2.3</span>
         },
         <span style=color:#062873;font-weight:700>&#34;core&#34;</span> : {
             <span style=color:#062873;font-weight:700>&#34;minute&#34;</span>:<span style=color:#40a070>0.01</span>,
-            <span style=color:#062873;font-weight:700>&#34;five-minutes&#34;</span>:<span style=color:#40a070>0.01</span>,
-            <span style=color:#062873;font-weight:700>&#34;fithteen-minutes&#34;</span>:<span style=color:#40a070>0.5</span>
+            <span style=color:#062873;font-weight:700>&#34;five-Minutes&#34;</span>:<span style=color:#40a070>0.01</span>,
+            <span style=color:#062873;font-weight:700>&#34;fithteenMinutes&#34;</span>:<span style=color:#40a070>0.5</span>
         }
     },
     <span style=color:#062873;font-weight:700>&#34;memory&#34;</span>:{
@@ -105,7 +105,18 @@ Menu
         }
     ]
 }
-</code></pre></div>
+</code></pre></div><h3 id=20220303>2022/03/03</h3>
+<p>So today I have started implementing the agent service using Python and FastApi as it&rsquo;s not going to do anything complicated. However since then I have decided to add an additional two end points which
+will provide some extra operations. First is the <strong>/</strong> endpoint also known as root. I generally like to provide something here to give some information about the service that they are attempting to
+consume. For the root endpoint I have decided to actually show the swagger docs for the api, I think that this is useful as there is no functionality at this endpoint, and would show people where they could go from here. The next end point I&rsquo;ve decided to add is the <strong>/device</strong> which
+will just return the following at the moment:</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json>{
+	<span style=color:#062873;font-weight:700>&#34;hostname&#34;</span>:<span style=color:#4070a0>&#34;name&#34;</span>,
+	<span style=color:#062873;font-weight:700>&#34;address&#34;</span>:<span style=color:#4070a0>&#34;12.32.123.2&#34;</span>,
+	<span style=color:#062873;font-weight:700>&#34;name&#34;</span>:<span style=color:#4070a0>&#34;my server&#34;</span>,
+	<span style=color:#062873;font-weight:700>&#34;apiVersion&#34;</span>: <span style=color:#4070a0>&#34;2.1&#34;</span>
+}
+</code></pre></div><p>The reason for this my thinking is that the server might want to go check back every now and then to see if it&rsquo;s changed.</p>
 <div class="row mt-5 mb-3">
 <div class="col-6 text-left">
 <a class="btn btn-light btn-lg col-12 disabled" href=#><span class=h1>&#8592;</span></a>
