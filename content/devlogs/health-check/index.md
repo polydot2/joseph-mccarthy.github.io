@@ -66,7 +66,7 @@ The small service deployed to the device will have single endpoint at the moment
 
 So today I have started implementing the agent service using Python and FastApi as it's not going to do anything complicated. However since then I have decided to add an additional two end points which 
 will provide some extra operations. First is the __/__ endpoint also known as root. I generally like to provide something here to give some information about the service that they are attempting to 
-consume. Not sure about the content at the moment, however it will probably be some sort of descriptive json or even swagger documentation. The next end point I've decided to add is the __/device__ which 
+consume. For the root endpoint I have decided to actually show the swagger docs for the api, I think that this is useful as there is no functionality at this endpoint, and would show people where they could go from here. The next end point I've decided to add is the __/device__ which 
 will just return the following at the moment:
 
 ```json
