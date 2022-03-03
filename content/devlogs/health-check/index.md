@@ -21,13 +21,13 @@ The small service deployed to the device will have single endpoint at the moment
     "load":{
         "native" : {
             "minute":0.43,
-            "five-minutes":0.2,
-            "fithteen-minutes":2.3
+            "fiveMinutes":0.2,
+            "fithteenMinutes":2.3
         },
         "core" : {
             "minute":0.01,
-            "five-minutes":0.01,
-            "fithteen-minutes":0.5
+            "five-Minutes":0.01,
+            "fithteenMinutes":0.5
         }
     },
     "memory":{
@@ -61,3 +61,21 @@ The small service deployed to the device will have single endpoint at the moment
     ]
 }
 ```
+
+### 2022/03/03 
+
+So today I have started implementing the agent service using Python and FastApi as it's not going to do anything complicated. However since then I have decided to add an additional two end points which 
+will provide some extra operations. First is the __/__ endpoint also known as root. I generally like to provide something here to give some information about the service that they are attempting to 
+consume. Not sure about the content at the moment, however it will probably be some sort of descriptive json or even swagger documentation. The next end point I've decided to add is the __/device__ which 
+will just return the following at the moment:
+
+```json
+{
+	"hostname":"name",
+	"address":"12.32.123.2",
+	"name":"my server",
+	"apiVersion": "2.1"
+}
+```
+
+The reason for this my thinking is that the server might want to go check back every now and then to see if it's changed.
