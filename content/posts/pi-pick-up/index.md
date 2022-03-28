@@ -3,7 +3,7 @@ title: "Pi Pick Up"
 date: 2022-03-28T13:56:43+01:00
 draft: false
 sidebar: true
-tags: [shopping,rasberry pi,new toys]
+tags: [Shopping,Rasberry Pi,New Toys]
 hero: "hero.png"
 summary: "Managed to pick up a couple of Raspberry PI's. A few ideas for them."
 ---
