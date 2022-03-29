@@ -6,4 +6,6 @@ sidebar: true
 tags: [Rasberry Pi, Infrastructure, Network, PiVPN]
 hero: "hero.png"
 summary: As I'm setting up my network for future things, I really need need a VPN
+images: "hero.png"
+
 ---

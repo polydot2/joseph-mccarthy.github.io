@@ -6,6 +6,8 @@ sidebar: true
 tags: [Rasberry Pi, Infrastructure, Network, Pi Hole]
 hero: "hero.png"
 summary: Got my hands on a Raspberry Pi, first thing first block all the advertisements.
+images: "hero.png"
+
 ---
 
 So I finally got my hands on a Raspberry Pi, thanks to a work friend who wasn't using it at the time. So once I had it sent over I knew what I wanted to do with it first. I wanted to install Pi-Hole. The amount of advertising and tracking on the internet really bothers me it's not even the stuff that you see, it's the requests that you don't.

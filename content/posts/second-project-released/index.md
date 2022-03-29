@@ -6,6 +6,8 @@ sidebar: true
 tags: [Project, Hugo, Bootstrap]
 hero: "hero.png"
 summary: It's taken a while, but I have finished my Hugo/Freelance Bootstrap Theme
+images: "hero.png"
+
 ---
 
 Well this one was a pain, but so worth it as I have this nice stable site built on top of two things that I love [Hugo](https://github.com/gohugoio) and [Bootstrap Freelance template](https://github.com/StartBootstrap/startbootstrap-freelancer). Now it's wasn't really that hard, it was more annoying rather than difficult. That's mostly because it's front end, which isn't really my strong side. That's a note that I should really address that and do more front end work/projects.

@@ -6,6 +6,8 @@ sidebar: false
 tags: [Infrastructure,Python,Flask,Docker,SqlAlchemy]
 hero: "hero.png"
 summary: Small and simple application to keep my ISP honest.
+images: "hero.png"
+
 ---
 
 I rather like the idea of keeping my Internet Service Provider honest with the service that they claim to be providing me. They charge enough for the service and it's not always apprant that we're getting it. So I created this project for my own need. It's been published to [GitHub.](https://github.com/joseph-mccarthy/internet-monitor) I'm very pleased that I was able to finall finished something, I also have a little post in my blog about the project [Blog]({{< ref "/posts/first-completed-project" >}} "Internet Monitor Done").

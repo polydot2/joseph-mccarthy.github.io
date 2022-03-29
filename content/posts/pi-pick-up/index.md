@@ -6,6 +6,8 @@ sidebar: true
 tags: [Shopping,Rasberry Pi,New Toys]
 hero: "hero.png"
 summary: "Managed to pick up a couple of Raspberry PI's. A few ideas for them."
+images: "hero.png"
+
 ---
 
 So the other week I made my way to Cambridge to visit the Rasberry Pi store. Hoping to get some new toys, as we all know they are impossible to buy anywhere and if you do find them, well expect to pay two or three times what the retail price should be. Well I was in luck, I managed to walk away with a Pi4 8Gb, and a Pi Zero 2W, along with a few accessories. I would have loved to purchase a few more, however for obvious reasons there is a limit per customer.

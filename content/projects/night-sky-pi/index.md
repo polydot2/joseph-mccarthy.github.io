@@ -6,6 +6,7 @@ sidebar: true
 tags: [Project, Python, Rasberry Pi]
 hero: "hero.png"
 summary: "Python and Raspberry Pi Night Sky Watcher and Processor"
+images: "hero.png"
 ---
   ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/joseph-mccarthy/night-sky-pi/Build?style=for-the-badge)
   ![Codecov](https://img.shields.io/codecov/c/gh/joseph-mccarthy/night-sky-pi?style=for-the-badge)

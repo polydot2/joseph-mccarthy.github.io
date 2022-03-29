@@ -6,6 +6,8 @@ sidebar: false
 tags: [Bootstrap, Freelancer, Hugo, Theme]
 hero: "hero.png"
 summary: I wanted to use Hugo and I wanted Bootstrap Freelance. So here it is.
+images: "hero.png"
+
 ---
 
 This repository contains a [Hugo](https://github.com/gohugoio) theme that is based on the [Bootstrap](https://getbootstrap.com/) Freelancer template. I created this Hugo theme as I have always liked the [Freelancer](https://github.com/StartBootstrap/startbootstrap-freelancer) Bootstrap template, and my preference for Hugo for static site generation made it a no brainer to me. As the origional Freelancer theme was a single page template, I have used some creative licence when it comes to the post listing pages, and content pages. If you have any suggestions on how it can be made better, please commit. To see an example of a site running it? Well you are as my site has been built with this template. You can also see the repository for the Hugo/Freelance theme [here.](https://github.com/joseph-mccarthy/hugo-bootstrap-freelancer-template)
@@ -73,4 +75,3 @@ There are also some assumptions made on the content structure for this theme. I 
 - [Bootstrap](https://getbootstrap.com/)
 - [Bootstrap Freelancer](https://github.com/StartBootstrap/startbootstrap-freelancer)
 - [Bootstrap Forms](https://startbootstrap.com/solution/contact-forms)
-
