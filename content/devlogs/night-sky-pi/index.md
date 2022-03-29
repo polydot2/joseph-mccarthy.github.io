@@ -8,11 +8,15 @@ hero: "hero.png"
 summary: "Developer Log for Night Sky Pi Project with rolling updates."
 images: "hero.png"
 ---
+<div class="text-center m-2">
+
   ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/joseph-mccarthy/night-sky-pi/Build?style=for-the-badge)
   ![Codecov](https://img.shields.io/codecov/c/gh/joseph-mccarthy/night-sky-pi?style=for-the-badge)
   ![Sonar Quality Gate](https://img.shields.io/sonar/quality_gate/joseph-mccarthy_night-sky-pi/main?server=https%3A%2F%2Fsonarcloud.io&style=for-the-badge)
   ![GitHub](https://img.shields.io/github/license/joseph-mccarthy/night-sky-pi?style=for-the-badge)
   ![wakatime](https://wakatime.com/badge/github/joseph-mccarthy/night-sky-pi.svg?style=for-the-badge)
+
+</div>
 
 So I now have myself a Raspberry Zero 2W. This means I can now begin a project that I have been holding off for a while, which is my night sky pi. The princple of the project is rather straight forward I want a device that I can place outside which will just look up.
 

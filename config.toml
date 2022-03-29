@@ -7,7 +7,6 @@ summaryLength=40
 paginate=9
 
 
-
 [params]
   tagLine = "Developer - Dreamer - Potato"
   homePosts = 3
@@ -54,3 +53,6 @@ paginate=9
     noClasses = true
     style = 'friendly'
     tabWidth = 4
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
