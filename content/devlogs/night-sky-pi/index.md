@@ -18,4 +18,4 @@ I'm trying to make it as lightweight as possible due to the hardware, so only ti
 
 ----
 
-## 28/03/2022
+<!-- ## 28/03/2022 -->
