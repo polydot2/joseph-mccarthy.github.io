@@ -56,7 +56,10 @@ Menu
 </div>
 </div>
 <div class="row justify-content-left">
-<p><img src="https://img.shields.io/github/license/joseph-mccarthy/night-sky-pi?style=for-the-badge" alt=GitHub>
+<p><img src="https://img.shields.io/github/workflow/status/joseph-mccarthy/night-sky-pi/Build?style=for-the-badge" alt="GitHub Workflow Status">
+<img src="https://img.shields.io/codecov/c/gh/joseph-mccarthy/night-sky-pi?style=for-the-badge" alt=Codecov>
+<img src="https://img.shields.io/sonar/quality_gate/joseph-mccarthy_night-sky-pi/main?server=https%3A%2F%2Fsonarcloud.io&style=for-the-badge" alt="Sonar Quality Gate">
+<img src="https://img.shields.io/github/license/joseph-mccarthy/night-sky-pi?style=for-the-badge" alt=GitHub>
 <img src="https://wakatime.com/badge/github/joseph-mccarthy/night-sky-pi.svg?style=for-the-badge" alt=wakatime></p>
 <p>So I now have myself a Raspberry Zero 2W. This means I can now begin a project that I have been holding off for a while, which is my night sky pi. The princple of the project is rather straight forward I want a device that I can place outside which will just look up.</p>
 <p>During the night it will record the sky not sure if it&rsquo;s going to be pictures or video. Then during the day it will process those images or video to try and detect and meteors or other objects. I&rsquo;m expecting a lot of planes while I tweak the code.</p>
@@ -68,6 +71,11 @@ Menu
 <p>I also took this time to update the version of python installed to 3.10.3 which I&rsquo;ll be using the application. Another thing was installing git, because this will allow me to quickly pull changes down to the device for testing. Once the application is completed I&rsquo;ll be researching a more formal way to distribute it.</p>
 <p>Now for some development, first thing first is setting up the readme file, then the requirements.txt. Then the creating of the main module entry point. Simple enough. So there are a few things I need to do, which I&rsquo;m going to call the loop! This loop will get the current datetime, then for a given date, along with a coordinate it will then get the sunrise and sunset. This is to work out where we are in the cycle. So do we need to capture images or process images and wait for sunset. There is a an edge case to this which is the current datetime could be the next day, however we are still in the preious night. For example, it could be 2am which is before sunrise and sunset for that given datetime, however really we are on the pervious cycle.</p>
 <p>So we need to check the datetime being after the sunset and before the next day sunrise. If this is the case then we capture images, however we also need to check if this false, then check if the datetime is between yesterday sunset and todays sunrise, which would be true if the time was past 00:00. If neither of the above are true, then it can be certain that we are between the sunrise and sunset of the current datetime, and we should either be processing images or waiting for sunset.</p>
+<hr>
+<h2 id=29032022>29/03/2022</h2>
+<p>Today has been a rather productive day in my eyes. I haven&rsquo;t done much code, but spent some time doing all the admin stuff around the project. So the progress today has been setting up a unit test, which at the moment tests nothing. But this test was needed to set up a github action to build the code base and run tests.</p>
+<p>The next step was to set up codecov and sonar cloud for the project, then modify the action to provide code coverage, which at this point is zero, and also send violations and quality metrics to sonar cloud.</p>
+<p>With these completed I was then able to do the all important adding of badges to the readme file. So now at a glace I can see the build, coverage, quality gate and the important licence information MIT what else.</p>
 <div class="row mt-5 mb-3">
 <div class="col-6 text-left">
 <a class="btn btn-light btn-lg col-12 disabled" href=#><span class=h1>&#8592;</span></a>
