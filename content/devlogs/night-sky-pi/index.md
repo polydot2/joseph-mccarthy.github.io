@@ -42,3 +42,30 @@ Today has been a rather productive day in my eyes. I haven't done much code, but
 The next step was to set up codecov and sonar cloud for the project, then modify the action to provide code coverage, which at this point is zero, and also send violations and quality metrics to sonar cloud.
 
 With these completed I was then able to do the all important adding of badges to the readme file. So now at a glace I can see the build, coverage, quality gate and the important licence information MIT what else.
+
+Aswell as some of the admin and code quality work I did manage to get some coding done. I created some functions for dates, rather simple, just getting today, previous and next. This are simple to do inline, however it's just my preference to split these out into methods and place them in a module. The next thing I done was create a module to get sunrise and sunset data. I found a great module to do this for me called __suntime__.
+
+```python
+def get_rise_and_set(date: datetime, coorindates: tuple()) -> tuple():
+    latitude, longitude = coorindates
+    sun = Sun(latitude, longitude)
+    sr = sun.get_sunrise_time(date).replace(tzinfo=None)
+    ss = sun.get_sunset_time(date).replace(tzinfo=None)
+    return (sr, ss)
+```
+
+All it requires is the latitude, longitude and a datetime, then it's able to return the datetime of the sunrise and sunset. I was thinking of using a rest api to get this information for me, however this is a nicer solution in my eyes. So I imported this module and wrapped it within my own sun module. The only modification I done to the datetime returned is to remove the timezone information as this is something I'm not interested in and allows me to compare the datetimes returned here with those from my datetime functions.
+
+Lastly I adding some command line arguements to the program so I was able to provide information here rather than looking into configuration files at the moment.
+
+```python
+parser = argparse.ArgumentParser()
+parser.add_argument("--lat",type=float,required=True,help="Latitude")
+parser.add_argument("--lon",type=float,required=True,help="Longitude")
+parser.add_argument("--log",type=str,help="Level",default=logging.WARNING)
+args = parser.parse_args()
+```
+
+The arguements being passed is the latitude and longitude of the camera, which are required for this program to execute. Then an optional debug level, which defaults to __WARNING__, this just allows me to quickly debug the application while I develop it.
+
+----
