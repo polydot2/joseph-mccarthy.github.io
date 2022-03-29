@@ -56,3 +56,8 @@ paginate=9
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+
+[outputFormats]
+     [outputFormats.RSS]
+         mediaType = "application/rss+xml"
+         baseName = "feed"
