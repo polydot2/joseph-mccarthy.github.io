@@ -6,6 +6,7 @@ sidebar: true
 tags: [Project, Developer Log,Rasberry Pi]
 hero: "hero.png"
 summary: "Developer Log for Night Sky Pi Project with rolling updates."
+images: "hero.png"
 ---
   ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/joseph-mccarthy/night-sky-pi/Build?style=for-the-badge)
   ![Codecov](https://img.shields.io/codecov/c/gh/joseph-mccarthy/night-sky-pi?style=for-the-badge)
