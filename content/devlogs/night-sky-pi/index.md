@@ -74,3 +74,40 @@ args = parser.parse_args()
 The arguements being passed is the latitude and longitude of the camera, which are required for this program to execute. Then an optional debug level, which defaults to __WARNING__, this just allows me to quickly debug the application while I develop it.
 
 ----
+
+## 30/03/2022
+
+So today I didn't do much in features or extending the code base to the end goal, as I was playing clean up on my previous cowboy work. So tonight I spent the evening unit testing the functions that I have already written which isn't great, I should have written the tests first, and saved the time. I was also distracted because I wrote a post about [GitHub Sponsers]({{< ref "/posts/github-sponsers" >}}), which in my opinion is a great way to support open source. So carrying on with the unit testing of what I had previously done, I'm now up to __53%__ coverage, which is not a bad start.
+
+For the testing of the time_functions I had to do a little bit of refactoring as I wasn't able to mock the datetime module. So I have added ___get_now()__ which only returns the current datetime.
+
+```python
+def _get_now() -> datetime:
+    return datetime.now()
+```
+
+This allowed me to write predictable unit tests for my time_functions as I was able to mock out this method within my module. As this method calls upon the core python library of datetime, there is really no need to test it. With this being mocked I was able to test the other methods within the module to ensure expected results.
+
+### Refactoring
+
+I also took the opertunity once I had some unit tests to do a little bit of refactoring. Previously I had many little variables laying around and methods that took a few arguements. So what I have done is created some dataclasses, to encapsulate the core concepts of the application data.
+
+```python
+@dataclass 
+class Location:
+    latitude:float
+    longitude:float
+
+@dataclass
+class SunData:
+    sunrise:datetime
+    sunset:datetime
+  
+@dataclass
+class Observation:
+    date:datetime
+    location:Location
+    sun:SunData
+```
+
+Once we have decided what the observation date is for the capture run in the evening, we can create the Observation object. This contains all the data that's needed for the rest of the run and the capturing of images for the time being. It contains a SunData object, that just has the boundaries of the capture, being the sunset from and the run till sunrise (these are also different dates). Then there is the location information, where latitude and longitude have just been wrapped for easy reference.
