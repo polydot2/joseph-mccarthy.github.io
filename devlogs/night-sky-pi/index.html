@@ -94,6 +94,30 @@ parser<span style=color:#666>.</span>add_argument(<span style=color:#4070a0>&#34
 args <span style=color:#666>=</span> parser<span style=color:#666>.</span>parse_args()
 </code></pre></div><p>The arguements being passed is the latitude and longitude of the camera, which are required for this program to execute. Then an optional debug level, which defaults to <strong>WARNING</strong>, this just allows me to quickly debug the application while I develop it.</p>
 <hr>
+<h2 id=30032022>30/03/2022</h2>
+<p>So today I didn&rsquo;t do much in features or extending the code base to the end goal, as I was playing clean up on my previous cowboy work. So tonight I spent the evening unit testing the functions that I have already written which isn&rsquo;t great, I should have written the tests first, and saved the time. I was also distracted because I wrote a post about <a href=https://joseph-mccarthy.github.io/posts/github-sponsers/>GitHub Sponsers</a>, which in my opinion is a great way to support open source. So carrying on with the unit testing of what I had previously done, I&rsquo;m now up to <strong>53%</strong> coverage, which is not a bad start.</p>
+<p>For the testing of the time_functions I had to do a little bit of refactoring as I wasn&rsquo;t able to mock the datetime module. So I have added _<strong>get_now()</strong> which only returns the current datetime.</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#007020;font-weight:700>def</span> <span style=color:#06287e>_get_now</span>() <span style=color:#666>-&gt;</span> datetime:
+    <span style=color:#007020;font-weight:700>return</span> datetime<span style=color:#666>.</span>now()
+</code></pre></div><p>This allowed me to write predictable unit tests for my time_functions as I was able to mock out this method within my module. As this method calls upon the core python library of datetime, there is really no need to test it. With this being mocked I was able to test the other methods within the module to ensure expected results.</p>
+<h3 id=refactoring>Refactoring</h3>
+<p>I also took the opertunity once I had some unit tests to do a little bit of refactoring. Previously I had many little variables laying around and methods that took a few arguements. So what I have done is created some dataclasses, to encapsulate the core concepts of the application data.</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#555;font-weight:700>@dataclass</span> 
+<span style=color:#007020;font-weight:700>class</span> <span style=color:#0e84b5;font-weight:700>Location</span>:
+    latitude:<span style=color:#007020>float</span>
+    longitude:<span style=color:#007020>float</span>
+
+<span style=color:#555;font-weight:700>@dataclass</span>
+<span style=color:#007020;font-weight:700>class</span> <span style=color:#0e84b5;font-weight:700>SunData</span>:
+    sunrise:datetime
+    sunset:datetime
+  
+<span style=color:#555;font-weight:700>@dataclass</span>
+<span style=color:#007020;font-weight:700>class</span> <span style=color:#0e84b5;font-weight:700>Observation</span>:
+    date:datetime
+    location:Location
+    sun:SunData
+</code></pre></div><p>Once we have decided what the observation date is for the capture run in the evening, we can create the Observation object. This contains all the data that&rsquo;s needed for the rest of the run and the capturing of images for the time being. It contains a SunData object, that just has the boundaries of the capture, being the sunset from and the run till sunrise (these are also different dates). Then there is the location information, where latitude and longitude have just been wrapped for easy reference.</p>
 <div class="row mt-5 mb-3">
 <div class="col-6 text-left">
 <a class="btn btn-light btn-lg col-12 disabled" href=#><span class=h1>&#8592;</span></a>
