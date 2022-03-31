@@ -3,7 +3,7 @@
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta http-equiv=x-ua-compatible content="IE=edge">
-<title>Hello World</title>
+<title>Python Suntime Module</title>
 <link rel=stylesheet href=/css/style.css>
 </head>
 <body>
@@ -41,8 +41,8 @@ Menu
 <div class="container pb-5">
 <div class=row>
 <section class="page-section portfolio col-12 col-lg-10">
-<img class=card-img-top src=https://joseph-mccarthy.github.io/posts/hello-world/hero.png alt>
-<h2 class="page-section-heading text-center text-uppercase text-secondary mt-5">Hello World</h2>
+<img class=card-img-top src=https://joseph-mccarthy.github.io/posts/python-suntime-module/hero.png alt>
+<h2 class="page-section-heading text-center text-uppercase text-secondary mt-5">Python Suntime Module</h2>
 <div class="divider-custom m-0">
 <div class=divider-custom-line></div>
 <div class=divider-custom-icon><i class="fas fa-star"></i></div>
@@ -50,19 +50,39 @@ Menu
 </div>
 <div class="row mb-3">
 <div class="col text-center text-nowrap">
-<a class=h4 href=/tags/ramble/ title=Ramble><span class="badge bg-primary p-2 m-1">Ramble</span></a>
-<a class=h4 href=/tags/random/ title=Random><span class="badge bg-primary p-2 m-1">Random</span></a>
+<a class=h4 href=/tags/module/ title=Module><span class="badge bg-primary p-2 m-1">Module</span></a>
+<a class=h4 href=/tags/python/ title=Python><span class="badge bg-primary p-2 m-1">Python</span></a>
 </div>
 </div>
 <div class="row justify-content-left">
-<p>Hi and welcome to my little slice of the inernet. Everyone has a site a place to call their own, and this is mine. It&rsquo;s home of my general ramberlings and thoughts. I have primarly created this little site to keep track of things that I&rsquo;m working on, learning or looking to learn or do. It&rsquo;s probably going to be an incorherant mess to most, and probably full of grammer and spelling mistakes. But that&rsquo;s ok, well for me that is. It&rsquo;s basically my notebook, and for me to look back on an reflect in time to come.</p>
-<p>I&rsquo;m a Software Engineer by day, and I want to continue being a Software Engineer by night, basically a busmans holiday, or strange super hero with disappointing powers! So as some of my goals this year is to actually release some software of some use into the world and learn new things. I thought I would start here.</p>
+<p>So while working on the <a href=https://joseph-mccarthy.github.io/devlogs/night-sky-pi/>night sky pi</a> I needed a way to get the sunrise and sunset for dates. Firstly I thought I should use a webservice, however I really didn&rsquo;t like the fact of making more rest calls than I really needed to. Also there could be a possibiliy that device might run somewhere without a connection or reliable one at that. So I had to look elsewhere. This is when I came across the suntime python module on <a href=https://pypi.org/project/suntime/>pypi</a>.</p>
+<p>The module is really simple and clean to use. The only requirement in order to use the module is to create an instance of the Sun class passing in the latitude and longitude that you want the sunrise and sunset information from.</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#007020;font-weight:700>from</span> <span style=color:#0e84b5;font-weight:700>suntime</span> <span style=color:#007020;font-weight:700>import</span> Sun
+
+sun <span style=color:#666>=</span> Sun(<span style=color:#40a070>51.7678</span>, <span style=color:#40a070>0.0878</span>)
+
+<span style=color:#60a0b0;font-style:italic># Get sunrise and sunset UTC </span>
+sr <span style=color:#666>=</span> sun<span style=color:#666>.</span>get_sunrise_time()
+ss <span style=color:#666>=</span> sun<span style=color:#666>.</span>get_sunset_time()
+</code></pre></div><p>Above is the most simple usecase for the module, just getting the sunrise and sunset for today. If no date is passed in then todays date is defaulted. When calling this method it will return the datetime of both the sunrise and sunset as UTC rather than local time. Obviously if you pass a datetime into the methods it will return you the sunrise and sunset for that date.</p>
+<p>If you would rather have the datetimes of the sunrise and sunset returned in localtime, then there are specific methods for that, below is an example of doing so.</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#007020;font-weight:700>from</span> <span style=color:#0e84b5;font-weight:700>suntime</span> <span style=color:#007020;font-weight:700>import</span> Sun
+<span style=color:#007020;font-weight:700>from</span> <span style=color:#0e84b5;font-weight:700>datatime</span> <span style=color:#007020;font-weight:700>import</span> datetime
+
+sun <span style=color:#666>=</span> Sun(<span style=color:#40a070>51.7678</span>, <span style=color:#40a070>0.0878</span>)
+mydate <span style=color:#666>=</span> datetime<span style=color:#666>.</span>date(<span style=color:#40a070>2022</span>, <span style=color:#40a070>3</span>, <span style=color:#40a070>31</span>)
+
+<span style=color:#60a0b0;font-style:italic># Get local time sunrise and sunset </span>
+sr <span style=color:#666>=</span> sun<span style=color:#666>.</span>get_local_sunrise_time(mydate)
+ss <span style=color:#666>=</span> sun<span style=color:#666>.</span>get_local_sunset_time(mydate)
+
+</code></pre></div>
 <div class="row mt-5 mb-3">
 <div class="col-6 text-left">
-<a class="btn btn-primary btn-lg col-12" href=https://joseph-mccarthy.github.io/posts/first-completed-project/><span class=h1>&#8592;</span></a>
+<a class="btn btn-light btn-lg col-12 disabled" href=#><span class=h1>&#8592;</span></a>
 </div>
 <div class="col-6 text-right">
-<a class="btn btn-light disabled btn-lg col-12" href=#><span class=h1>&#8594;</span></a>
+<a class="btn btn-primary btn-lg col-12" href=https://joseph-mccarthy.github.io/posts/github-sponsers/><span class=h1>&#8594;</span></a>
 </div>
 </div>
 </div> </section>
@@ -71,11 +91,6 @@ Menu
 <div class="widget pt-3">
 <h4 class="mb-3 widget-title">Latest Posts</h4>
 <ul class=list-unstyled>
-<li class="d-flex my-1">
-<a href=https://joseph-mccarthy.github.io/posts/python-suntime-module/>
-<h5>Python Suntime Module</h5>
-</a>
-</li>
 <li class="d-flex my-1">
 <a href=https://joseph-mccarthy.github.io/posts/github-sponsers/>
 <h5>Github Sponsers</h5>
@@ -86,7 +101,28 @@ Menu
 <h5>Pi Pick Up</h5>
 </a>
 </li>
+<li class="d-flex my-1">
+<a href=https://joseph-mccarthy.github.io/posts/pi-hole/>
+<h5>Pi-hole</h5>
+</a>
+</li>
 </ul>
+</div>
+<div class="widget pt-3">
+<h4 class="mb-3 widget-title">Related Posts</h4>
+<ul class=list-unstyled>
+<li class="d-flex my-1">
+<a href=https://joseph-mccarthy.github.io/projects/internet-monitor/>
+<h5>Internet Monitor</h5>
+</a>
+</li>
+<li class="d-flex my-1">
+<a href=https://joseph-mccarthy.github.io/posts/first-completed-project/>
+<h5>First Completed Project</h5>
+</a>
+</li>
+</ul>
+</div>
 </div>
 </section>
 </div>
