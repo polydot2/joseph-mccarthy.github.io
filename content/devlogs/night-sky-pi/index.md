@@ -114,24 +114,7 @@ Once we have decided what the observation date is for the capture run in the eve
 
 ----
 
-## 01/04/2022
-
-- Tested infinate loop
-- started testing main
-- code coverage is up
-- turned main method into a class for testing
-
-----
-
-## 02/04/2022
-
-- unit test mock side effects
-  - assert capture.run.called
-  - print(capture.run.call_args_list[0])
-
-----
-
-## 25/05/2022
+## 24/05/2022
 
 So I have taken a break from my projects recently due to family holidays, events and the car failing on us, so have been sorting that out. That being said I'm starting to work on this again, I have decided to set a series of milestones for the project in order to simplify the development and not get dishearted at the possible lack of progress. You'll be able to see these milestones in GitHub, but I'll summerise them here.
 
