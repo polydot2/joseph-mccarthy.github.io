@@ -111,3 +111,49 @@ class Observation:
 ```
 
 Once we have decided what the observation date is for the capture run in the evening, we can create the Observation object. This contains all the data that's needed for the rest of the run and the capturing of images for the time being. It contains a SunData object, that just has the boundaries of the capture, being the sunset from and the run till sunrise (these are also different dates). Then there is the location information, where latitude and longitude have just been wrapped for easy reference.
+
+----
+
+## 01/04/2022
+
+- Tested infinate loop
+- started testing main
+- code coverage is up
+- turned main method into a class for testing
+
+----
+
+## 02/04/2022
+
+- unit test mock side effects
+  - assert capture.run.called
+  - print(capture.run.call_args_list[0])
+
+----
+
+## 25/05/2022
+
+So I have taken a break from my projects recently due to family holidays, events and the car failing on us, so have been sorting that out. That being said I'm starting to work on this again, I have decided to set a series of milestones for the project in order to simplify the development and not get dishearted at the possible lack of progress. You'll be able to see these milestones in GitHub, but I'll summerise them here.
+
+- Caputre images at night, then create a time lapse
+- Add information to the images during the timelapse
+  - Time stamp information
+  - Weather data
+  - Other Sensor information
+- Ability to completed timelapses to remote location
+  - ftp
+  - youtube
+- Streak Detection
+  - Notification of Streak
+- Monitoring
+  - Software Monitioring endpoint
+  - Auto Delete Tidy Up
+- Image masking
+  - Mask areas of the image to help with Streak Detection to avoid false posisitives
+- Calculation of area of sky covered by camera
+  - Show this coverage on a map
+- Ability to connect to a flight scanner to monitor aircraft to negate this from streak detection
+
+As you can see this is going to be a long term project for myself, and any help would be awesome.
+
+----
