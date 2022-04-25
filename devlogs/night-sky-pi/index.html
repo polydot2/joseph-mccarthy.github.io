@@ -118,6 +118,49 @@ args <span style=color:#666>=</span> parser<span style=color:#666>.</span>parse_
     location:Location
     sun:SunData
 </code></pre></div><p>Once we have decided what the observation date is for the capture run in the evening, we can create the Observation object. This contains all the data that&rsquo;s needed for the rest of the run and the capturing of images for the time being. It contains a SunData object, that just has the boundaries of the capture, being the sunset from and the run till sunrise (these are also different dates). Then there is the location information, where latitude and longitude have just been wrapped for easy reference.</p>
+<hr>
+<h2 id=24052022>24/05/2022</h2>
+<p>So I have taken a break from my projects recently due to family holidays, events and the car failing on us, so have been sorting that out. That being said I&rsquo;m starting to work on this again, I have decided to set a series of milestones for the project in order to simplify the development and not get dishearted at the possible lack of progress. You&rsquo;ll be able to see these milestones in GitHub, but I&rsquo;ll summerise them here.</p>
+<ul>
+<li>Caputre images at night, then create a time lapse</li>
+<li>Add information to the images during the timelapse
+<ul>
+<li>Time stamp information</li>
+<li>Weather data</li>
+<li>Other Sensor information</li>
+</ul>
+</li>
+<li>Ability to completed timelapses to remote location
+<ul>
+<li>ftp</li>
+<li>youtube</li>
+</ul>
+</li>
+<li>Streak Detection
+<ul>
+<li>Notification of Streak</li>
+</ul>
+</li>
+<li>Monitoring
+<ul>
+<li>Software Monitioring endpoint</li>
+<li>Auto Delete Tidy Up</li>
+</ul>
+</li>
+<li>Image masking
+<ul>
+<li>Mask areas of the image to help with Streak Detection to avoid false posisitives</li>
+</ul>
+</li>
+<li>Calculation of area of sky covered by camera
+<ul>
+<li>Show this coverage on a map</li>
+</ul>
+</li>
+<li>Ability to connect to a flight scanner to monitor aircraft to negate this from streak detection</li>
+</ul>
+<p>As you can see this is going to be a long term project for myself, and any help would be awesome.</p>
+<hr>
 <div class="row mt-5 mb-3">
 <div class="col-6 text-left">
 <a class="btn btn-light btn-lg col-12 disabled" href=#><span class=h1>&#8592;</span></a>
