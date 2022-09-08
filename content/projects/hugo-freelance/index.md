@@ -11,6 +11,7 @@ images: "hero.png"
 ---
 <div class="text-center m-2">
 
+![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/joseph-mccarthy/hugo-bootstrap-freelancer-template?color=green&style=for-the-badge)
 [![wakatime](https://wakatime.com/badge/github/joseph-mccarthy/hugo-bootstrap-freelancer-template.svg?style=for-the-badge)](https://wakatime.com/badge/github/joseph-mccarthy/hugo-bootstrap-freelancer-template)
 
 </div>
