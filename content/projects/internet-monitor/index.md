@@ -12,6 +12,7 @@ images: "hero.png"
 <div class="text-center m-2">
 
 ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/joseph-mccarthy/internet-monitor?color=green&style=for-the-badge)
+![GitHub](https://img.shields.io/github/license/joseph-mccarthy/internet-monitor?style=for-the-badge)
 ![Sonar Quality Gate](https://img.shields.io/sonar/quality_gate/joseph-mccarthy_internet-monitor?server=https%3A%2F%2Fsonarcloud.io&style=for-the-badge)
 [![wakatime](https://wakatime.com/badge/github/joseph-mccarthy/internet-monitor.svg?style=for-the-badge)](https://wakatime.com/badge/github/joseph-mccarthy/internet-monitor)
 
