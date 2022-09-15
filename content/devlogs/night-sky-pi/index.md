@@ -140,3 +140,11 @@ So I have taken a break from my projects recently due to family holidays, events
 As you can see this is going to be a long term project for myself, and any help would be awesome.
 
 ----
+
+## 15/09/2022
+
+So another period of absence working on this project. Seems to be a theme here. However, progress has been made. Night Sky Pi, now takes images throughout the night, dusk till dawn for the location and timezone that you have entered. Once the the capture of the stills has been carried out, while waiting for the next sunset to resume capture the application will scan it's data directories for missing timelapses. When a missing timelapse has been determined then a timelapse will be generated for the date using the captured stills. 
+
+As well as some active development on the application I have bene trying to use GitHub issues to track what I've been doing as my memory isn't great. Also I think that it keeps me focused as anyone who knows me, can confim I'm easily distracted.
+
+----
