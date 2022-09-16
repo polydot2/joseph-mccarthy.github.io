@@ -3,7 +3,7 @@ title: "First Completed Project"
 date: 2022-02-14T22:50:55Z
 draft: false
 sidebar: true
-tags: [Project, Python]
+tags: [Project, Python, Release]
 hero: "hero.png"
 summary: I've completed my first project. This is a big deal, I never finish anything.
 images: "hero.png"

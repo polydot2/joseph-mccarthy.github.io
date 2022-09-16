@@ -3,7 +3,7 @@ title: "Second Project Released"
 date: 2022-03-01T12:58:21Z
 draft: false
 sidebar: true
-tags: [Project, Hugo, Bootstrap]
+tags: [Project, Hugo, Bootstrap, Release]
 hero: "hero.png"
 summary: It's taken a while, but I have finished my Hugo/Freelance Bootstrap Theme
 images: "hero.png"
