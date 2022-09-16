@@ -7,6 +7,8 @@
 
 </div>
 
+![Project Image](banner.png)
+
 This repository contains my personal blog, feel free to use it as a working example of template the hugo freelancer bootstrap theme that I've created. You can find it [here](https://github.com/joseph-mccarthy/hugo-bootstrap-freelancer-template). 
 
 ## GitHub Actions
