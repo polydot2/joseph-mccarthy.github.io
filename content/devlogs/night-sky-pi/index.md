@@ -148,3 +148,11 @@ So another period of absence working on this project. Seems to be a theme here. 
 As well as some active development on the application I have bene trying to use GitHub issues to track what I've been doing as my memory isn't great. Also I think that it keeps me focused as anyone who knows me, can confim I'm easily distracted.
 
 ----
+
+## 16/09/2022
+
+So after some refactoring to create a camera instance at application start up and pass that into the loop that takes all the stills during the night, was woke up to some success. The camera didn't crash, and was rewarded with stills throughout the night and a generated time lapse. Below is the output I've uploaded to youtube. Now I need to continue with the tidy up.
+
+{{< youtube L86OlopdCoQ >}}
+
+----
