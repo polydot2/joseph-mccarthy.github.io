@@ -12,9 +12,10 @@ images: "hero.png"
 <div class="text-center m-2">
 
 [![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/joseph-mccarthy/internet-monitor?color=green&style=for-the-badge)](https://github.com/joseph-mccarthy/internet-monitor/releases/latest)
-![GitHub](https://img.shields.io/github/license/joseph-mccarthy/internet-monitor?style=for-the-badge)
-![Sonar Quality Gate](https://img.shields.io/sonar/quality_gate/joseph-mccarthy_internet-monitor?server=https%3A%2F%2Fsonarcloud.io&style=for-the-badge)
+[![GitHub](https://img.shields.io/github/license/joseph-mccarthy/internet-monitor?style=for-the-badge)](https://github.com/joseph-mccarthy/internet-monitor/blob/main/LICENCE)
+[![Sonar Quality Gate](https://img.shields.io/sonar/quality_gate/joseph-mccarthy_internet-monitor?server=https%3A%2F%2Fsonarcloud.io&style=for-the-badge)](https://sonarcloud.io/project/overview?id=joseph-mccarthy_internet-monitor)
 [![wakatime](https://wakatime.com/badge/github/joseph-mccarthy/internet-monitor.svg?style=for-the-badge)](https://wakatime.com/badge/github/joseph-mccarthy/internet-monitor)
+
 
 </div>
 

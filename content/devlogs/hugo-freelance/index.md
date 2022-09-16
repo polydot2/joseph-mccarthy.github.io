@@ -10,8 +10,8 @@ summary: "Developer Log for Bootstrap Freelancer Theme for Hugo"
 
 <div class="text-center m-2">
 
-![Sonar Quality Gate](https://img.shields.io/sonar/quality_gate/joseph-mccarthy_hugo-bootstrap-freelancer-template?server=https%3A%2F%2Fsonarcloud.io&style=for-the-badge)
-![GitHub](https://img.shields.io/github/license/joseph-mccarthy/hugo-bootstrap-freelancer-template?style=for-the-badge)
+[![Sonar Quality Gate](https://img.shields.io/sonar/quality_gate/joseph-mccarthy_hugo-bootstrap-freelancer-template?server=https%3A%2F%2Fsonarcloud.io&style=for-the-badge)](https://sonarcloud.io/project/overview?id=joseph-mccarthy_hugo-bootstrap-freelancer-template)
+[![GitHub](https://img.shields.io/github/license/joseph-mccarthy/hugo-bootstrap-freelancer-template?style=for-the-badge)](https://github.com/joseph-mccarthy/hugo-bootstrap-freelancer-template/blob/main/LICENSE)
 [![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/joseph-mccarthy/hugo-bootstrap-freelancer-template?color=green&style=for-the-badge)](https://github.com/joseph-mccarthy/hugo-bootstrap-freelancer-template/releases/latest)
 [![wakatime](https://wakatime.com/badge/github/joseph-mccarthy/hugo-bootstrap-freelancer-template.svg?style=for-the-badge)](https://wakatime.com/badge/github/joseph-mccarthy/hugo-bootstrap-freelancer-template)
 
