@@ -4,9 +4,6 @@
     padding: 5px
 }
 
-/* Error */
-.chroma .err {}
-
 /* LineTableTD */
 .chroma .lntd {
     vertical-align: top;
