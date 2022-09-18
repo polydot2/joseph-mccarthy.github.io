@@ -3,7 +3,7 @@ title: "Night Sky Pi Devlog"
 date: 2022-03-28T22:47:03+01:00
 draft: false
 sidebar: true
-tags: [Project, Developer Log,Rasberry Pi]
+tags: [Project, Developer Log,Raspberry Pi]
 hero: "hero.png"
 summary: "Developer Log for Night Sky Pi Project with rolling updates."
 images: "hero.png"

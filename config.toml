@@ -12,8 +12,8 @@ paginate=9
   homePosts = 3
   homeProjects = 3
 
-  aboutLeft = "I'm a full time developer which is mostly around Java and DevOps. I'm also a father of a little boy, who keeps me active and on my toes. I'm counting it as exercise, because I need it. Also it keeps my Fitbit a little happier."
-  aboutRight = "Out of work my interests vary. I enjoy taking pictures, and generally spending time outdoors walking. I have created this site so I can keep track of what I'm up to and focus more on trying to get some Open Source projects running."
+  aboutLeft = "I work full time as a Java Developer, however I love to tinker and build things. So I also spend a lot of time out of work coding as well."
+  aboutRight = "I've created this little slice of the internet, to keep track of what I do, and give me something to look back on from time to time."
 
 [params.location]
   lineOne = "Harlow, Essex"

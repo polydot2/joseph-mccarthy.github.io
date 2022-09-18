@@ -3,7 +3,7 @@ title: "Night Sky Pi First Timelapse"
 date: 2022-09-16T13:08:22+01:00
 draft: false
 sidebar: true
-tags: [Night Sky Pi, Project, Python, Rasberry Pi]
+tags: [Night Sky Pi, Project, Python, Raspberry Pi]
 hero: "hero.png"
 summary: "The first generated timelapse for the night sky pi, but not using a Rasberry Pi"
 ---
