@@ -3,8 +3,9 @@
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta http-equiv=x-ua-compatible content="IE=edge">
-<title>Night Sky Pi First Timelapse</title>
+<title>Raspberry Pi</title>
 <link rel=stylesheet href=/css/style.css>
+<link rel=alternate type=application/rss+xml href=/tags/raspberry-pi/feed.xml title="Joseph McCarthy">
 </head>
 <body>
 <head>
@@ -37,90 +38,65 @@ Menu
 </div>
 </nav>
 <header class="masthead2 text-white text-center"></header>
-<div class="container pb-5">
-<div class=row>
-<section class="page-section portfolio col-12 col-lg-10">
-<img class=card-img-top src=https://joseph-mccarthy.github.io/posts/night-sky-pi-first-timelapse/hero.png alt>
-<h2 class="page-section-heading text-center text-uppercase text-secondary mt-5">Night Sky Pi First Timelapse</h2>
-<div class="divider-custom m-0">
+<section class="page-section portfolio" id=portfolio>
+<div class=container>
+<h2 class="page-section-heading text-center text-uppercase text-secondary mt-5">Raspberry Pi</h2>
+<div class=divider-custom>
 <div class=divider-custom-line></div>
 <div class=divider-custom-icon><em class="fas fa-star"></em></div>
 <div class=divider-custom-line></div>
 </div>
-<div class="row mb-3">
-<div class="col text-center text-nowrap">
-<a class=h4 href=/tags/night-sky-pi/ title="Night Sky Pi"><span class="badge bg-primary p-2 m-1">Night Sky Pi</span></a>
-<a class=h4 href=/tags/project/ title=Project><span class="badge bg-primary p-2 m-1">Project</span></a>
-<a class=h4 href=/tags/python/ title=Python><span class="badge bg-primary p-2 m-1">Python</span></a>
-<a class=h4 href=/tags/raspberry-pi/ title="Raspberry Pi"><span class="badge bg-primary p-2 m-1">Raspberry Pi</span></a>
-</div>
-</div>
 <div class="row justify-content-left">
-<p>Another period of absence working on this project. Seems to be a theme here. However, progress has been made. Night Sky Pi, now takes images throughout the night, dusk till dawn for the location and timezone that you have entered. Once the the capture of the stills has been carried out, while waiting for the next sunset to resume capture the application will scan it&rsquo;s data directories for missing timelapses. When a missing timelapse has been determined then a timelapse will be generated for the date using the captured stills.</p>
-<p>So after some refactoring to create a camera instance at application start up and pass that into the loop that takes all the stills during the night, was woke up to some success. The camera didn&rsquo;t crash, and was rewarded with stills throughout the night and a generated time lapse. Below is the output I&rsquo;ve uploaded to youtube. Now I need to continue with the tidy up.
- </p>
-<p>
-<div style=position:relative;padding-bottom:56.25%;height:0;overflow:hidden>
-<iframe src=https://www.youtube.com/embed/L86OlopdCoQ style=position:absolute;top:0;left:0;width:100%;height:100%;border:0 allowfullscreen title="YouTube Video"></iframe>
+<div class=col-md-4>
+<div class="card mb-4">
+<a href=https://joseph-mccarthy.github.io/posts/night-sky-pi-first-timelapse/><img class=card-img-top src=https://joseph-mccarthy.github.io/posts/night-sky-pi-first-timelapse/hero.png alt="Card image cap"></a>
+<div class=card-body>
+<h5 class=card-title>Night Sky Pi First Timelapse</h5>
+<p class="card-text text-center">The first generated timelapse for the night sky pi, but not using a Rasberry Pi</p>
 </div>
- </p>
-<p>I also need to get some new hardware as this project is currently only using a webcam, which is controlled by opencv. The plan is to get a new Rasberry Pi, a HQ camera module. Then this will allow me to use libcamera, giving me much more control over the exposure and longer exposures something that web cameras can&rsquo;t really support. However I will be keeping the possibility to use a webcam incase someone can&rsquo;t source a CSI-2 camera and will perform some activity.</p>
-<p>As well as some active development on the application I have bene trying to use GitHub issues to track what I&rsquo;ve been doing as my memory isn&rsquo;t great. Also I think that it keeps me focused as anyone who knows me, can confim I&rsquo;m easily distracted. I&rsquo;m trying to make it as lightweight as possible due to the hardware, so only time will tell if I&rsquo;ll be able to process the images on this device or if they will have to be offloaded to another device for processing. You can find the source code on <a href=https://github.com/joseph-mccarthy/night-sky-pi>GitHub</a></p>
-<div class="row mt-5 mb-3">
-<div class="col-6 text-left">
-<a class="btn btn-primary btn-lg col-12" href=https://joseph-mccarthy.github.io/posts/hugo-freelance-v1-0-2/><span class=h1>&#8592;</span></a>
-</div>
-<div class="col-6 text-right">
-<a class="btn btn-primary btn-lg col-12" href=https://joseph-mccarthy.github.io/posts/python-suntime-module/><span class=h1>&#8594;</span></a>
+<div class=card-footer>
+<div class="d-flex justify-content-between align-items-center">
+<small class=text-muted>2 minutes</small>
+<div class=btn-group>
+<a href=https://joseph-mccarthy.github.io/posts/night-sky-pi-first-timelapse/ class="btn btn-lg btn-primary">Read More</a>
 </div>
 </div>
-</div> </section>
-<section class="page-section portfolio col-12 col-lg-2 my-3">
-<div id=sidebar class=fixed>
-<div class="widget pt-3">
-<h4 class="mb-3 widget-title">Latest Posts</h4>
-<ul class=list-unstyled>
-<li class="d-flex my-1">
-<a href=https://joseph-mccarthy.github.io/posts/pi-shopping/>
-<h5>Pi Shopping</h5>
-</a>
+</div>
+</div>
+</div>
+<div class=col-md-4>
+<div class="card mb-4">
+<a href=https://joseph-mccarthy.github.io/devlogs/night-sky-pi/><img class=card-img-top src=https://joseph-mccarthy.github.io/devlogs/night-sky-pi/hero.png alt="Card image cap"></a>
+<div class=card-body>
+<h5 class=card-title>Night Sky Pi Devlog</h5>
+<p class="card-text text-center">Developer Log for Night Sky Pi Project with rolling updates.</p>
+</div>
+<div class=card-footer>
+<div class="d-flex justify-content-between align-items-center">
+<small class=text-muted>9 minutes</small>
+<div class=btn-group>
+<a href=https://joseph-mccarthy.github.io/devlogs/night-sky-pi/ class="btn btn-lg btn-primary">Read More</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-12 p-3">
+<div class="d-flex justify-content-center"><nav aria-label="Page navigation example ">
+<ul class="pagination justify-content-center pagination-lg">
+<li class="page-item disabled">
+<a class="page-link bg-light" href=# tabindex=-1><span class=h2>&#8592;</span></a>
 </li>
-<li class="d-flex my-1">
-<a href=https://joseph-mccarthy.github.io/posts/hugo-freelance-v1-0-2/>
-<h5>Hugo Freelance 1.0.2</h5>
-</a>
-</li>
-<li class="d-flex my-1">
-<a href=https://joseph-mccarthy.github.io/posts/python-suntime-module/>
-<h5>Python Suntime Module</h5>
-</a>
+<li class="page-item disabled">
+<a class="page-link bg-light" href=#><span class=h2>&#8594;</span></a>
 </li>
 </ul>
+</nav>
 </div>
-<div class="widget pt-3">
-<h4 class="mb-3 widget-title">Related Posts</h4>
-<ul class=list-unstyled>
-<li class="d-flex my-1">
-<a href=https://joseph-mccarthy.github.io/devlogs/night-sky-pi/>
-<h5>Night Sky Pi Devlog</h5>
-</a>
-</li>
-<li class="d-flex my-1">
-<a href=https://joseph-mccarthy.github.io/posts/first-completed-project/>
-<h5>First Completed Project</h5>
-</a>
-</li>
-<li class="d-flex my-1">
-<a href=https://joseph-mccarthy.github.io/posts/hugo-freelance-v1-0-2/>
-<h5>Hugo Freelance 1.0.2</h5>
-</a>
-</li>
-</ul>
+</div>
 </div>
 </div>
 </section>
-</div>
-</div>
 <footer class="footer text-center">
 <div class=container>
 <div class=row>
