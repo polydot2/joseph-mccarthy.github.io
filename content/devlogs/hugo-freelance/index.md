@@ -1,5 +1,5 @@
 ---
-title: "Hugo Freelance"
+title: "Hugo Freelance Devlog"
 date: 2022-09-16T20:02:03+01:00
 draft: false
 sidebar: true
