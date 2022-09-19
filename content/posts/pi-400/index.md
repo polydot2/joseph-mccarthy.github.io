@@ -1,7 +1,7 @@
 ---
 title: "Raspberry Pi 400"
 date: 2022-09-19T17:45:48+01:00
-draft: true
+draft: false
 sidebar: true
 tags: [Raspberry Pi]
 hero: "hero.png"
