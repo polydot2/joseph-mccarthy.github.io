@@ -3,7 +3,7 @@ title: "Pi-hole"
 date: 2022-03-01T20:33:23Z
 draft: false
 sidebar: true
-tags: [Rasberry Pi, Infrastructure, Network, Pi Hole]
+tags: [Raspberry Pi, Infrastructure, Network, Pi Hole]
 hero: "hero.png"
 summary: Got my hands on a Raspberry Pi, first thing first block all the advertisements.
 images: "hero.png"

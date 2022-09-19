@@ -3,7 +3,7 @@ title: "Pi Shopping"
 date: 2022-09-18T18:57:12+01:00
 draft: false
 sidebar: true
-tags: [Shopping,Rasberry Pi,New Toys]
+tags: [Shopping,Raspberry Pi,New Toys]
 hero: "hero.png"
 summary: "Cambridge trip, always results in more Raspberry Pi's!"
 ---
