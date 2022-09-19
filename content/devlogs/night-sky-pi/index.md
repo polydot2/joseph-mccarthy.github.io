@@ -22,7 +22,7 @@ So I now have myself a Raspberry Zero 2W. This means I can now begin a project t
 
 During the night it will record the sky not sure if it's going to be pictures or video. Then during the day it will process those images or video to try and detect and meteors or other objects. I'm expecting a lot of planes while I tweak the code.
 
-I'm trying to make it as lightweight as possible due to the hardware, so only time will tell if I'll be able to process the images on this device or if they will have to be offloaded to another device for processing. You can find the source code on [GitHub](https://github.com/joseph-mccarthy/night-sky-pi)
+I'm trying to make it as lightweight as possible due to the hardware, so only time will tell if I'll be able to process the images on this device or if they will have to be offloaded to another device for processing. You can find the source code on [__GitHub__](https://github.com/joseph-mccarthy/night-sky-pi)
 
 ----
 
@@ -77,7 +77,7 @@ The arguements being passed is the latitude and longitude of the camera, which a
 
 ## 30/03/2022
 
-So today I didn't do much in features or extending the code base to the end goal, as I was playing clean up on my previous cowboy work. So tonight I spent the evening unit testing the functions that I have already written which isn't great, I should have written the tests first, and saved the time. I was also distracted because I wrote a post about [GitHub Sponsers]({{< ref "/posts/github-sponsers" >}}), which in my opinion is a great way to support open source. So carrying on with the unit testing of what I had previously done, I'm now up to __53%__ coverage, which is not a bad start.
+So today I didn't do much in features or extending the code base to the end goal, as I was playing clean up on my previous cowboy work. So tonight I spent the evening unit testing the functions that I have already written which isn't great, I should have written the tests first, and saved the time. I was also distracted because I wrote a post about [__GitHub Sponsers__]({{< ref "/posts/github-sponsers" >}}), which in my opinion is a great way to support open source. So carrying on with the unit testing of what I had previously done, I'm now up to __53%__ coverage, which is not a bad start.
 
 For the testing of the time_functions I had to do a little bit of refactoring as I wasn't able to mock the datetime module. So I have added ___get_now()__ which only returns the current datetime.
 
@@ -156,3 +156,18 @@ So after some refactoring to create a camera instance at application start up an
 {{< youtube L86OlopdCoQ >}}
 
 ----
+
+## 19/09/2022
+
+There has been some exciting progress since the time lapse a few days ago. I had a trip to the Cambridge [__Raspberry Pi Shop__]({{< ref "/posts/pi-shopping" >}}) and purchased a Raspberry Pi 4. The intention of this device is to connect it to the Raspberry Pi HQ Camera Module and this be the test hardware I use for this project going forward.
+
+This comes with some extra challenges that I haven't had to face yet, however knew were coming. Currently the project has been using a web camera, which is configured by the camera id, linking to the usb video id within the OS. But the Pi Camera, uses the CSI interface, and has far more options that the web camera was able to provide. For example with the web camera I was using OpenCV-Python to capture the frame, this gave me no control over the exposure of the image, as it was basically a frame from a video feed. 
+
+Now the Pi HQ camera uses [__libcamera__](https://www.libcamera.org/) on bullseye. This means that I have to call an external command line to capture an image, as there isn't a python wrapper for it at the moment, however you can follow beta the progress [__here on GitHub__](https://github.com/raspberrypi/picamera2). Once this is release I will be refactoring the application to use that, as it will probably be simplier going forward. 
+
+Now that I can control exposure this raises another issue, I have to determine if an image is correctly exposed. This raises many questions as there are a few ways to measure exposure, I could do an entire post on it which I think I will at some point. However I have got a rough, hacky process in place while I iron out the details.
+
+So when starting up Night Sky Pi, the camera id can be set to -1, to indicate that we want to use the CSI camera interface. This is due to zero or more being valid usb device identifiers. Using -1 will create a new camera instance, and therefore use [__libcamera__](https://www.libcamera.org/)  to capture images. Once an image has been captured, the I use numpy to determine the entire average light value after converting to grayscale. If the returned value is in the range 110-135 then this is considered acceptable and no alterations are done to the exposure value of the next image. 
+
+This has worked in principle, but it's rather rough around the edges causing the exposure to jump around between frames. Also this is taking the entire frame into account, which I believe is the reason for the jumps. I need to adapt this to either use [__spot metering__](https://en.wikipedia.org/wiki/Metering_mode#Spot_metering) or [__center weighted__](https://en.wikipedia.org/wiki/Metering_mode#Center-weighted_average_metering) which is a more reasonible approach to image exposure. However that's for another udate.
+
