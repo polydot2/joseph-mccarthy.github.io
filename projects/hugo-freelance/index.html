@@ -66,45 +66,13 @@ Menu
 <h2 id=how-to-use>How To Use</h2>
 <hr>
 <p>You can use this theme like you would with any Hugo theme. The generally accepted way of using themes is to install them as a git sub module so you&rsquo;re able to keep them upto date with the theme repository.</p>
-<div class=highlight><pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-console data-lang=console><span style=color:#c65d09;font-weight:700># </span>inside your hugo directory clone this repository as a sub module
-<span style=color:#888>git submodule add https://github.com/joseph-mccarthy/hugo-bootstrap-freelancer-template themes/freelancer
-</span><span style=color:#888></span><span style=color:#c65d09;font-weight:700># </span>update your config to use new themem
-<span style=color:#888>echo theme = \&#34;freelancer\&#34; &gt;&gt; config.toml
-</span></code></pre></div><p>This theme also comes with it&rsquo;s own default content type, and should be used also along with the idea of bundles. Here is an example command on how to use the default content type</p>
-<div class=highlight><pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-console data-lang=console><span style=color:#888>hugo new --kind default posts/my-post
-</span></code></pre></div><p>This content type has some font matter that you&rsquo;ll be able to make use of as it&rsquo;s using bundles. There is a field named &ldquo;hero&rdquo; which would be the path to the banner image of the post, this image is also used in the post listing pages. The &ldquo;sidebar&rdquo; field states if to show the post as full width or with the meta sidebar which will show related posts and last 5 publised posts.</p>
+<script src="https://gist.github.com/joseph-mccarthy/71d1a23c791be31d27b72f4f4f2c5f4d.js?file=set-theme.sh"></script>
+<p>This theme also comes with it&rsquo;s own default content type, and should be used also along with the idea of bundles. Here is an example command on how to use the default content type</p>
+<script src="https://gist.github.com/joseph-mccarthy/71d1a23c791be31d27b72f4f4f2c5f4d.js?file=add-post.sh"></script>
+<p>This content type has some font matter that you&rsquo;ll be able to make use of as it&rsquo;s using bundles. There is a field named &ldquo;hero&rdquo; which would be the path to the banner image of the post, this image is also used in the post listing pages. The &ldquo;sidebar&rdquo; field states if to show the post as full width or with the meta sidebar which will show related posts and last 5 publised posts.</p>
 <p>There are also some extra paramters that should be added to your config.toml in order to use the theme to it&rsquo;s full.</p>
-<div class=highlight><pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml>[params]
-  tagLine = <span style=color:#4070a0>&#34;Graphic Artist - Web Designer - Illustrator&#34;</span>
-  homePosts = <span style=color:#40a070>3</span>
-  homeProjects = <span style=color:#40a070>3</span>
-
-  aboutLeft = <span style=color:#4070a0>&#34;Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional SASS stylesheets for easy customization.&#34;</span>
-  aboutRight = <span style=color:#4070a0>&#34;You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!&#34;</span>
-
-[params.location]
-  lineOne = <span style=color:#4070a0>&#34;2215 John Daniel Drive&#34;</span>
-  lineTwo = <span style=color:#4070a0>&#34;Clark, MO 65243&#34;</span> 
-
-[params.sbform]
-      token = <span style=color:#4070a0>&#34;&#34;</span>
-
-[params.homebutton]
-  text = <span style=color:#4070a0>&#34;Free Donwload&#34;</span>
-  link = <span style=color:#4070a0>&#34;https://startbootstrap.com/theme/freelancer/&#34;</span> 
-  icon = <span style=color:#4070a0>&#34;fa-download&#34;</span>
-
-[related]
-  includeNewer = <span style=color:#007020;font-weight:700>true</span>
-  threshold = <span style=color:#40a070>80</span>
-  toLower = <span style=color:#007020;font-weight:700>false</span>
-[[related.indices]]
-  name = <span style=color:#4070a0>&#39;tags&#39;</span>
-  weight = <span style=color:#40a070>100</span>
-[[related.indices]]
-  name = <span style=color:#4070a0>&#39;date&#39;</span>
-  weight = <span style=color:#40a070>10</span>
-</code></pre></div><p>There are also some assumptions made on the content structure for this theme. I have created this with the idea of two areas <strong>posts</strong> and <strong>projects</strong> which will drive the menu, home page and content listing areas.</p>
+<script src="https://gist.github.com/joseph-mccarthy/71d1a23c791be31d27b72f4f4f2c5f4d.js?file=config.toml"></script>
+<p>There are also some assumptions made on the content structure for this theme. I have created this with the idea of two areas <strong>posts</strong> and <strong>projects</strong> which will drive the menu, home page and content listing areas.</p>
 <h2 id=references>References</h2>
 <ul>
 <li><a href=https://github.com/gohugoio>Hugo</a></li>

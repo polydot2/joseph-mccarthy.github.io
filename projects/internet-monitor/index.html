@@ -68,75 +68,18 @@ Menu
 <p>I know that there are many solutions out there that can provide this information, and can create dashboards. But I didn&rsquo;t want the restrictions of having to use those front ends or dashboards. So I decided that it would be made of two parts.</p>
 <p>The fist part is just a simple python script that runs every 30 minutes that calls upon the <a href=https://www.speedtest.net/apps/cli>speed test cli</a> to perform the speed test and then persist that in a sqlite database. The second component is the webservice that I can call on to get the results and other data. This again was written in python using flask.</p>
 <p>The API exposes three endpoints for the data saved in the database</p>
-<p> 
- </p>
 <h5 id=latest>/latest</h5>
-<div class=highlight><pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json>{
-    <span style=color:#062873;font-weight:700>&#34;download&#34;</span>: <span style=color:#40a070>3296755.0</span>,
-    <span style=color:#062873;font-weight:700>&#34;upload&#34;</span>: <span style=color:#40a070>2175216.0</span>,
-    <span style=color:#062873;font-weight:700>&#34;ping&#34;</span>: <span style=color:#40a070>62.496</span>,
-    <span style=color:#062873;font-weight:700>&#34;time&#34;</span>: <span style=color:#40a070>1645789388.759391</span>
-}
-</code></pre></div><p> 
- </p>
+<script src="https://gist.github.com/joseph-mccarthy/7082da93374f60361883238134490676.js?file=latest.json"></script>
 <h5 id=last-day>/last-day</h5>
-<div class=highlight><pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json>{
-    <span style=color:#062873;font-weight:700>&#34;download&#34;</span>: {
-        <span style=color:#062873;font-weight:700>&#34;high&#34;</span>: <span style=color:#40a070>3852744.0</span>,
-        <span style=color:#062873;font-weight:700>&#34;average&#34;</span>: <span style=color:#40a070>3629769.4166666665</span>,
-        <span style=color:#062873;font-weight:700>&#34;low&#34;</span>: <span style=color:#40a070>3296755.0</span>
-    },
-    <span style=color:#062873;font-weight:700>&#34;upload&#34;</span>: {
-        <span style=color:#062873;font-weight:700>&#34;high&#34;</span>: <span style=color:#40a070>2331189.0</span>,
-        <span style=color:#062873;font-weight:700>&#34;average&#34;</span>: <span style=color:#40a070>1883408.0416666667</span>,
-        <span style=color:#062873;font-weight:700>&#34;low&#34;</span>: <span style=color:#40a070>1215527.0</span>
-    },
-    <span style=color:#062873;font-weight:700>&#34;ping&#34;</span>: {
-        <span style=color:#062873;font-weight:700>&#34;high&#34;</span>: <span style=color:#40a070>62.496</span>,
-        <span style=color:#062873;font-weight:700>&#34;average&#34;</span>: <span style=color:#40a070>16.989</span>,
-        <span style=color:#062873;font-weight:700>&#34;low&#34;</span>: <span style=color:#40a070>12.594</span>
-    }
-}
-</code></pre></div><p> 
- </p>
+<script src="https://gist.github.com/joseph-mccarthy/7082da93374f60361883238134490676.js?file=last-day.json"></script>
 <h5 id=graph>/graph</h5>
-<div class=highlight><pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json>[
-    {
-        <span style=color:#062873;font-weight:700>&#34;id&#34;</span>: <span style=color:#40a070>1</span>,
-        <span style=color:#062873;font-weight:700>&#34;download&#34;</span>: <span style=color:#40a070>3364494.0</span>,
-        <span style=color:#062873;font-weight:700>&#34;upload&#34;</span>: <span style=color:#40a070>1085589.0</span>,
-        <span style=color:#062873;font-weight:700>&#34;ping&#34;</span>: <span style=color:#40a070>15.426</span>,
-        <span style=color:#062873;font-weight:700>&#34;time&#34;</span>: <span style=color:#40a070>1645710501.983828</span>
-    },
-    {
-        <span style=color:#062873;font-weight:700>&#34;id&#34;</span>: <span style=color:#40a070>2</span>,
-        <span style=color:#062873;font-weight:700>&#34;download&#34;</span>: <span style=color:#40a070>3330109.0</span>,
-        <span style=color:#062873;font-weight:700>&#34;upload&#34;</span>: <span style=color:#40a070>822428.0</span>,
-        <span style=color:#062873;font-weight:700>&#34;ping&#34;</span>: <span style=color:#40a070>17.148</span>,
-        <span style=color:#062873;font-weight:700>&#34;time&#34;</span>: <span style=color:#40a070>1645712303.276396</span>
-    },
-    {
-        <span style=color:#062873;font-weight:700>&#34;id&#34;</span>: <span style=color:#40a070>3</span>,
-        <span style=color:#062873;font-weight:700>&#34;download&#34;</span>: <span style=color:#40a070>3316571.0</span>,
-        <span style=color:#062873;font-weight:700>&#34;upload&#34;</span>: <span style=color:#40a070>1076903.0</span>,
-        <span style=color:#062873;font-weight:700>&#34;ping&#34;</span>: <span style=color:#40a070>15.835</span>,
-        <span style=color:#062873;font-weight:700>&#34;time&#34;</span>: <span style=color:#40a070>1645714140.544144</span>
-    },
-    {
-        <span style=color:#062873;font-weight:700>&#34;id&#34;</span>: <span style=color:#40a070>4</span>,
-        <span style=color:#062873;font-weight:700>&#34;download&#34;</span>: <span style=color:#40a070>3261149.0</span>,
-        <span style=color:#062873;font-weight:700>&#34;upload&#34;</span>: <span style=color:#40a070>1134400.0</span>,
-        <span style=color:#062873;font-weight:700>&#34;ping&#34;</span>: <span style=color:#40a070>15.76</span>,
-        <span style=color:#062873;font-weight:700>&#34;time&#34;</span>: <span style=color:#40a070>1645715986.757451</span>
-    }
-]
-</code></pre></div><p> 
+<script src="https://gist.github.com/joseph-mccarthy/7082da93374f60361883238134490676.js?file=graph.json"></script>
+<p> 
  </p>
 <h3 id=docker>Docker</h3>
 <p>There is also a provided Docker image that runs both the speed test and the api with an exposed port of <strong>5000</strong></p>
-<div class=highlight><pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>docker pull joemccarthy/internet-monitor:latest
-docker run -d -p 5000:5000 joemccarthy/internet-monitor:latest
-</code></pre></div><p> 
+<script src="https://gist.github.com/joseph-mccarthy/7082da93374f60361883238134490676.js?file=run.sh"></script>
+<p> 
  </p>
 <h3 id=technologies>Technologies</h3>
 <ul>
