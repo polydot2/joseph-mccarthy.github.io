@@ -50,26 +50,13 @@ With these completed I was then able to do the all important adding of badges to
 
 Aswell as some of the admin and code quality work I did manage to get some coding done. I created some functions for dates, rather simple, just getting today, previous and next. This are simple to do inline, however it's just my preference to split these out into methods and place them in a module. The next thing I done was create a module to get sunrise and sunset data. I found a great module to do this for me called __suntime__.
 
-```python
-def get_rise_and_set(date: datetime, coorindates: tuple()) -> tuple():
-    latitude, longitude = coorindates
-    sun = Sun(latitude, longitude)
-    sr = sun.get_sunrise_time(date).replace(tzinfo=None)
-    ss = sun.get_sunset_time(date).replace(tzinfo=None)
-    return (sr, ss)
-```
+<script src="https://gist.github.com/joseph-mccarthy/513a0b2dbf7c10ec9bd56615162f06d6.js?file=sunrise.py"></script>
 
 All it requires is the latitude, longitude and a datetime, then it's able to return the datetime of the sunrise and sunset. I was thinking of using a rest api to get this information for me, however this is a nicer solution in my eyes. So I imported this module and wrapped it within my own sun module. The only modification I done to the datetime returned is to remove the timezone information as this is something I'm not interested in and allows me to compare the datetimes returned here with those from my datetime functions.
 
 Lastly I adding some command line arguements to the program so I was able to provide information here rather than looking into configuration files at the moment.
 
-```python
-parser = argparse.ArgumentParser()
-parser.add_argument("--lat",type=float,required=True,help="Latitude")
-parser.add_argument("--lon",type=float,required=True,help="Longitude")
-parser.add_argument("--log",type=str,help="Level",default=logging.WARNING)
-args = parser.parse_args()
-```
+<script src="https://gist.github.com/joseph-mccarthy/513a0b2dbf7c10ec9bd56615162f06d6.js?file=arg-parse.py"></script>
 
 The arguements being passed is the latitude and longitude of the camera, which are required for this program to execute. Then an optional debug level, which defaults to __WARNING__, this just allows me to quickly debug the application while I develop it.
 
@@ -81,10 +68,7 @@ So today I didn't do much in features or extending the code base to the end goal
 
 For the testing of the time_functions I had to do a little bit of refactoring as I wasn't able to mock the datetime module. So I have added ___get_now()__ which only returns the current datetime.
 
-```python
-def _get_now() -> datetime:
-    return datetime.now()
-```
+<script src="https://gist.github.com/joseph-mccarthy/513a0b2dbf7c10ec9bd56615162f06d6.js?file=now.py"></script>
 
 This allowed me to write predictable unit tests for my time_functions as I was able to mock out this method within my module. As this method calls upon the core python library of datetime, there is really no need to test it. With this being mocked I was able to test the other methods within the module to ensure expected results.
 
@@ -92,23 +76,7 @@ This allowed me to write predictable unit tests for my time_functions as I was a
 
 I also took the opertunity once I had some unit tests to do a little bit of refactoring. Previously I had many little variables laying around and methods that took a few arguements. So what I have done is created some dataclasses, to encapsulate the core concepts of the application data.
 
-```python
-@dataclass 
-class Location:
-    latitude:float
-    longitude:float
-
-@dataclass
-class SunData:
-    sunrise:datetime
-    sunset:datetime
-  
-@dataclass
-class Observation:
-    date:datetime
-    location:Location
-    sun:SunData
-```
+<script src="https://gist.github.com/joseph-mccarthy/513a0b2dbf7c10ec9bd56615162f06d6.js?file=dataclasses.py"></script>
 
 Once we have decided what the observation date is for the capture run in the evening, we can create the Observation object. This contains all the data that's needed for the rest of the run and the capturing of images for the time being. It contains a SunData object, that just has the boundaries of the capture, being the sunset from and the run till sunrise (these are also different dates). Then there is the location information, where latitude and longitude have just been wrapped for easy reference.
 
