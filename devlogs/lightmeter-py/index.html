@@ -56,6 +56,13 @@ Menu
 </div>
 </div>
 <div class="row justify-content-left">
+<div class="text-center m-2">
+<p><a href=https://github.com/joseph-mccarthy/lightmeter-py/actions/workflows/python-app.yml><img src="https://img.shields.io/github/workflow/status/joseph-mccarthy/lightmeter-py/Build?style=for-the-badge" alt="GitHub Workflow Status"></a>
+<a href=https://app.codecov.io/gh/joseph-mccarthy/lightmeter-py><img src="https://img.shields.io/codecov/c/gh/joseph-mccarthy/lightmeter-py?style=for-the-badge" alt=Codecov></a>
+<a href="https://sonarcloud.io/project/overview?id=joseph-mccarthy_lightmeter-py"><img src="https://img.shields.io/sonar/quality_gate/joseph-mccarthy_lightmeter-py/main?server=https%3A%2F%2Fsonarcloud.io&style=for-the-badge" alt="Sonar Quality Gate"></a>
+<a href=https://github.com/joseph-mccarthy/lightmeter-py/blob/main/licence><img src="https://img.shields.io/github/license/joseph-mccarthy/lightmeter-py?style=for-the-badge" alt=GitHub></a>
+<a href=https://wakatime.com/badge/github/joseph-mccarthy/lightmeter-py><img src="https://wakatime.com/badge/github/joseph-mccarthy/lightmeter-py.svg?style=for-the-badge" alt=wakatime></a></p>
+</div>
 <p>While working on the <a href=https://joseph-mccarthy.github.io/devlogs/night-sky-pi/><strong>Night Sky Pi</strong></a> project ran into an issue. The issue was with the exposure value of the images taken with the <strong>Pi HQ</strong> camera. I started playing around and found that I would have to compensate the image exposure from one image to another. I got a rustic solution working, however it was causing the exposure to bounce around the place between frames and wasn&rsquo;t consistant. Finding that this problem was larger than I though and would make more sense as an indepenant module I created a new <a href=https://github.com/joseph-mccarthy/lightmeter-py><strong>GitHub</strong></a> Repository, hoping that this would make solving the issue much simplier.</p>
 <h2 id=overview>Overview</h2>
 <p>The principle of the module is to behave similar to a light meter that&rsquo;s built into cameras. The main purpose is to examine areas of an image with an known exposure, the calculate the new exposure to bring the image to the best suitable exposure for the image. There are many ways to exposure an image, the first increment of the lightmeter module is to either examine the entire frame known as either <a href=https://en.wikipedia.org/wiki/Metering_mode#Average_metering><strong>Evaluative or Average Metering</strong></a>, which isn&rsquo;t great as this can cause the exposure to be inconsistant but for simplicity it&rsquo;s there. However I&rsquo;m also going to implement spot metering, first spot metering in the center of the frame.s</p>
