@@ -1,12 +1,10 @@
 <!doctype html><html lang=en-us>
 <head>
-<meta name=generator content="Hugo 0.91.2">
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta http-equiv=x-ua-compatible content="IE=edge">
-<title>Joseph McCarthy</title>
+<title>New Project Light Meter Py</title>
 <link rel=stylesheet href=/css/style.css>
-<link rel=alternate type=application/rss+xml href=/feed.xml title="Joseph McCarthy">
 </head>
 <body>
 <head>
@@ -38,87 +36,83 @@ Menu
 </div>
 </div>
 </nav>
-<header class="masthead bg-primary text-white text-center">
-<div class="container d-flex align-items-center flex-column">
-<img class="masthead-avatar mb-5" src=/profile.png alt>
-<h1 class="masthead-heading text-uppercase mb-0">Joseph McCarthy</h1>
-<div class="divider-custom divider-light">
+<header class="masthead2 text-white text-center"></header>
+<div class="container pb-5">
+<div class=row>
+<section class="page-section portfolio col-12 col-lg-10">
+<img class=card-img-top src=https://joseph-mccarthy.github.io/posts/new-project-light-meter-py/hero.png alt>
+<h2 class="page-section-heading text-center text-uppercase text-secondary mt-5">New Project Light Meter Py</h2>
+<div class="divider-custom m-0">
 <div class=divider-custom-line></div>
 <div class=divider-custom-icon><em class="fas fa-star"></em></div>
 <div class=divider-custom-line></div>
 </div>
-<p class="masthead-subheading font-weight-light mb-0">Developer - Dreamer - Potato</p>
+<div class="row mb-3">
+<div class="col text-center text-nowrap">
+<a class=h4 href=/tags/light-meter-py/ title="Light Meter Py"><span class="badge bg-primary p-2 m-1">Light Meter Py</span></a>
+<a class=h4 href=/tags/night-sky-pi/ title="Night Sky Pi"><span class="badge bg-primary p-2 m-1">Night Sky Pi</span></a>
+<a class=h4 href=/tags/project/ title=Project><span class="badge bg-primary p-2 m-1">Project</span></a>
+<a class=h4 href=/tags/python/ title=Python><span class="badge bg-primary p-2 m-1">Python</span></a>
 </div>
-</header>
-<section class="page-section portfolio pb-5" id=portfolio>
-<div class=container>
-<h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Recent Projects</h2>
-<div class=divider-custom>
-<div class=divider-custom-line></div>
-<div class=divider-custom-icon><em class="fas fa-star"></em></div>
-<div class=divider-custom-line></div>
-</div>
-<div class="row justify-content-center">
-<div class="col-md-6 col-lg-4 mb-5">
-<div class="portfolio-item mx-auto" data-bs-toggle=modal data-bs-target=#modal1>
-<div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-<div class="portfolio-item-caption-content text-center text-white"><em class="fas fa-plus fa-3x"></em></div>
-</div>
-<img class=img-fluid src=https://joseph-mccarthy.github.io/projects/hugo-freelance/hero.png alt=...>
-</div>
-</div>
-<div class="col-md-6 col-lg-4 mb-5">
-<div class="portfolio-item mx-auto" data-bs-toggle=modal data-bs-target=#modal2>
-<div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-<div class="portfolio-item-caption-content text-center text-white"><em class="fas fa-plus fa-3x"></em></div>
-</div>
-<img class=img-fluid src=https://joseph-mccarthy.github.io/projects/internet-monitor/hero.png alt=...>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="page-section portfolio pb-5" id=posts>
-<div class=container>
-<h2 class="page-section-heading text-center text-uppercase text-secondary">Recent Posts</h2>
-<div class=divider-custom>
-<div class=divider-custom-line></div>
-<div class=divider-custom-icon><em class="fas fa-star"></em></div>
-<div class=divider-custom-line></div>
 </div>
 <div class="row justify-content-left">
-<div class=col-md-4>
-<div class="card mb-4">
-<a href=https://joseph-mccarthy.github.io/posts/new-project-light-meter-py/><img class=card-img-top src=https://joseph-mccarthy.github.io/posts/new-project-light-meter-py/hero.png alt="Card image cap"></a>
+<p>While working on the <a href=https://joseph-mccarthy.github.io/devlogs/night-sky-pi/><strong>Night Sky Pi</strong></a> project ran into an issue. The issue was with the exposure value of the images taken with the <strong>Pi HQ</strong> camera. I started playing around and found that I would have to compensate the image exposure from one image to another. I got a rustic solution working, however it was causing the exposure to bounce around the place between frames and wasn&rsquo;t consistant. Finding that this problem was larger than I though and would make more sense as an indepenant module I created a new <a href=https://github.com/joseph-mccarthy/lightmeter-py><strong>GitHub</strong></a> Repository, hoping that this would make solving the issue much simplier.</p>
+<p>The principle of the module is to behave similar to a light meter that&rsquo;s built into cameras. The main purpose is to examine areas of an image with an known exposure, the calculate the new exposure to bring the image to the best suitable exposure for the image. There are many ways to exposure an image, the first increment of the lightmeter module is to either examine the entire frame known as either <a href=https://en.wikipedia.org/wiki/Metering_mode#Average_metering><strong>Evaluative or Average Metering</strong></a>, which isn&rsquo;t great as this can cause the exposure to be inconsistant but for simplicity it&rsquo;s there. However I&rsquo;m also going to implement spot metering, first spot metering in the center of the frame. As with all my projects recently you can also follow the progress here on it&rsquo;s <a href=https://joseph-mccarthy.github.io/devlogs/lightmeter-py/><strong>developer log</strong></a>.</p>
+<div class="row mt-5 mb-3">
+<div class="col-6 text-left">
+<a class="btn btn-light btn-lg col-12 disabled" href=#><span class=h1>&#8592;</span></a>
+</div>
+<div class="col-6 text-right">
+<a class="btn btn-primary btn-lg col-12" href=https://joseph-mccarthy.github.io/posts/pi-400/><span class=h1>&#8594;</span></a>
 </div>
 </div>
-<div class=col-md-4>
-<div class="card mb-4">
-<a href=https://joseph-mccarthy.github.io/posts/pi-400/><img class=card-img-top src=https://joseph-mccarthy.github.io/posts/pi-400/hero.png alt="Card image cap"></a>
+</div> </section>
+<section class="page-section portfolio col-12 col-lg-2 my-3">
+<div id=sidebar class=fixed>
+<div class="widget pt-3">
+<h4 class="mb-3 widget-title">Latest Posts</h4>
+<ul class=list-unstyled>
+<li class="d-flex my-1">
+<a href=https://joseph-mccarthy.github.io/posts/pi-400/>
+<h5>Raspberry Pi 400</h5>
+</a>
+</li>
+<li class="d-flex my-1">
+<a href=https://joseph-mccarthy.github.io/posts/pi-shopping/>
+<h5>Pi Shopping</h5>
+</a>
+</li>
+<li class="d-flex my-1">
+<a href=https://joseph-mccarthy.github.io/posts/hugo-freelance-v1-0-2/>
+<h5>Hugo Freelance 1.0.2</h5>
+</a>
+</li>
+</ul>
 </div>
-</div>
-<div class=col-md-4>
-<div class="card mb-4">
-<a href=https://joseph-mccarthy.github.io/posts/pi-shopping/><img class=card-img-top src=https://joseph-mccarthy.github.io/posts/pi-shopping/hero.png alt="Card image cap"></a>
-</div>
-</div>
+<div class="widget pt-3">
+<h4 class="mb-3 widget-title">Related Posts</h4>
+<ul class=list-unstyled>
+<li class="d-flex my-1">
+<a href=https://joseph-mccarthy.github.io/posts/night-sky-pi-first-timelapse/>
+<h5>Night Sky Pi First Timelapse</h5>
+</a>
+</li>
+<li class="d-flex my-1">
+<a href=https://joseph-mccarthy.github.io/posts/first-completed-project/>
+<h5>First Completed Project</h5>
+</a>
+</li>
+<li class="d-flex my-1">
+<a href=https://joseph-mccarthy.github.io/devlogs/lightmeter-py/>
+<h5>Lightmeter Py</h5>
+</a>
+</li>
+</ul>
 </div>
 </div>
 </section>
-<section class="page-section bg-primary text-white mt-5 py-5" id=about>
-<div class=container>
-<h2 class="page-section-heading text-center text-uppercase text-white">About</h2>
-<div class="divider-custom divider-light">
-<div class=divider-custom-line></div>
-<div class=divider-custom-icon><em class="fas fa-star"></em></div>
-<div class=divider-custom-line></div>
-</div>
-<div class=row>
-<div class="col-lg-4 ms-auto"><p class=lead>I work full time as a Java Developer, however I love to tinker and build things. So I also spend a lot of time out of work coding as well.</p></div>
-<div class="col-lg-4 me-auto"><p class=lead>I've created this little slice of the internet, to keep track of what I do, and give me something to look back on from time to time.</p></div>
 </div>
 </div>
-</section>
 <footer class="footer text-center">
 <div class=container>
 <div class=row>
