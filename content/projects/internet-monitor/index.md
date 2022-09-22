@@ -29,82 +29,20 @@ The fist part is just a simple python script that runs every 30 minutes that cal
 
 The API exposes three endpoints for the data saved in the database
 
-&nbsp;
-&nbsp;
-
 ##### /latest
 
-```json
-{
-    "download": 3296755.0,
-    "upload": 2175216.0,
-    "ping": 62.496,
-    "time": 1645789388.759391
-}
-```
+<script src="https://gist.github.com/joseph-mccarthy/7082da93374f60361883238134490676.js?file=latest.json"></script>
 
-&nbsp;
-&nbsp;
 
 ##### /last-day
 
-```json
-{
-    "download": {
-        "high": 3852744.0,
-        "average": 3629769.4166666665,
-        "low": 3296755.0
-    },
-    "upload": {
-        "high": 2331189.0,
-        "average": 1883408.0416666667,
-        "low": 1215527.0
-    },
-    "ping": {
-        "high": 62.496,
-        "average": 16.989,
-        "low": 12.594
-    }
-}
-```
 
-&nbsp;
-&nbsp;
+<script src="https://gist.github.com/joseph-mccarthy/7082da93374f60361883238134490676.js?file=last-day.json"></script>
 
 ##### /graph
 
-```json
-[
-    {
-        "id": 1,
-        "download": 3364494.0,
-        "upload": 1085589.0,
-        "ping": 15.426,
-        "time": 1645710501.983828
-    },
-    {
-        "id": 2,
-        "download": 3330109.0,
-        "upload": 822428.0,
-        "ping": 17.148,
-        "time": 1645712303.276396
-    },
-    {
-        "id": 3,
-        "download": 3316571.0,
-        "upload": 1076903.0,
-        "ping": 15.835,
-        "time": 1645714140.544144
-    },
-    {
-        "id": 4,
-        "download": 3261149.0,
-        "upload": 1134400.0,
-        "ping": 15.76,
-        "time": 1645715986.757451
-    }
-]
-```
+
+<script src="https://gist.github.com/joseph-mccarthy/7082da93374f60361883238134490676.js?file=graph.json"></script>
 
 &nbsp;
 &nbsp;
@@ -113,10 +51,7 @@ The API exposes three endpoints for the data saved in the database
 
 There is also a provided Docker image that runs both the speed test and the api with an exposed port of **5000**
 
-```sh
-docker pull joemccarthy/internet-monitor:latest
-docker run -d -p 5000:5000 joemccarthy/internet-monitor:latest
-```
+<script src="https://gist.github.com/joseph-mccarthy/7082da93374f60361883238134490676.js?file=run.sh"></script>
 
 &nbsp;
 &nbsp;

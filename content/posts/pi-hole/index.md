@@ -16,9 +16,7 @@ For example if a site says hey here's an advert well, I'm kinda ok with that. Ho
 
 So like all Raspberry Pi projects it started with the flashing of an SD card with Raspberian OS lite, I don't need a Desktop experience for this project just ssh will do. Once in it was a simple onliner to get the installer going for Pi-Hole.
 
-```console
-curl -sSL https://install.pi-hole.net | bash
-```
+<script src="https://gist.github.com/joseph-mccarthy/cd3f121be58b37eb0175325c54133b52.js"></script>
 
 Then you're just guided through the steps to setting up Pi-Hole, simple.
 
