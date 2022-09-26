@@ -3,7 +3,7 @@
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta http-equiv=x-ua-compatible content="IE=edge">
-<title>New Project Light Meter Py</title>
+<title>Harlow Bindicator</title>
 <link rel=stylesheet href=/css/style.css>
 </head>
 <body>
@@ -40,8 +40,8 @@ Menu
 <div class="container pb-5">
 <div class=row>
 <section class="page-section portfolio col-12 col-lg-10">
-<img class=card-img-top src=https://joseph-mccarthy.github.io/posts/new-project-light-meter-py/hero.png alt>
-<h2 class="page-section-heading text-center text-uppercase text-secondary mt-5">New Project Light Meter Py</h2>
+<img class=card-img-top src=https://joseph-mccarthy.github.io/posts/harlow-bindicator/hero.png alt>
+<h2 class="page-section-heading text-center text-uppercase text-secondary mt-5">Harlow Bindicator</h2>
 <div class="divider-custom m-0">
 <div class=divider-custom-line></div>
 <div class=divider-custom-icon><em class="fas fa-star"></em></div>
@@ -49,21 +49,47 @@ Menu
 </div>
 <div class="row mb-3">
 <div class="col text-center text-nowrap">
-<a class=h4 href=/tags/light-meter-py/ title="Light Meter Py"><span class="badge bg-primary p-2 m-1">Light Meter Py</span></a>
-<a class=h4 href=/tags/night-sky-pi/ title="Night Sky Pi"><span class="badge bg-primary p-2 m-1">Night Sky Pi</span></a>
 <a class=h4 href=/tags/project/ title=Project><span class="badge bg-primary p-2 m-1">Project</span></a>
 <a class=h4 href=/tags/python/ title=Python><span class="badge bg-primary p-2 m-1">Python</span></a>
+<a class=h4 href=/tags/raspberry-pi/ title="Raspberry Pi"><span class="badge bg-primary p-2 m-1">Raspberry Pi</span></a>
 </div>
 </div>
 <div class="row justify-content-left">
-<p>While working on the <a href=https://joseph-mccarthy.github.io/devlogs/night-sky-pi/><strong>Night Sky Pi</strong></a> project ran into an issue. The issue was with the exposure value of the images taken with the <strong>Pi HQ</strong> camera. I started playing around and found that I would have to compensate the image exposure from one image to another. I got a rustic solution working, however it was causing the exposure to bounce around the place between frames and wasn&rsquo;t consistant. Finding that this problem was larger than I though and would make more sense as an indepenant module I created a new <a href=https://github.com/joseph-mccarthy/lightmeter-py><strong>GitHub</strong></a> Repository, hoping that this would make solving the issue much simplier.</p>
-<p>The principle of the module is to behave similar to a light meter that&rsquo;s built into cameras. The main purpose is to examine areas of an image with an known exposure, the calculate the new exposure to bring the image to the best suitable exposure for the image. There are many ways to exposure an image, the first increment of the lightmeter module is to either examine the entire frame known as either <a href=https://en.wikipedia.org/wiki/Metering_mode#Average_metering><strong>Evaluative or Average Metering</strong></a>, which isn&rsquo;t great as this can cause the exposure to be inconsistant but for simplicity it&rsquo;s there. However I&rsquo;m also going to implement spot metering, first spot metering in the center of the frame. As with all my projects recently you can also follow the progress here on it&rsquo;s <a href=https://joseph-mccarthy.github.io/devlogs/lightmeter-py/><strong>developer log</strong></a>.</p>
+<p>A simple Raspberry Pi project that checks the <a href=https://www.harlow.gov.uk/><strong>Harlow Council</strong></a> website for the bin collection day and bin type of a given property. If the current day is bin day then light up the correct LED for the given bin type.</p>
+<h2 id=problem>Problem</h2>
+<p>I&rsquo;m always forgetting when bin day is, and when bin day comes it&rsquo;s always a panic to get the bin out. This also includes looking out the window to see what bin the neighbours have put out to make sure that I put the same one out. So I looked for a solution and came across <a href=https://twitter.com/tarbard/status/1002464120447397888><strong>this</strong></a> by <a href=https://twitter.com/tarbard><strong>Darren Tar</strong></a>, it&rsquo;s awesome.</p>
+<p>However, I don&rsquo;t live in Glasgow, so I checked to see if Harlow had a nice API, and my luck kicked in, no they didn&rsquo;t.</p>
+<h3 id=harlow-council>Harlow Council</h3>
+<p>They had some horrific embedded thing. Their implementation took firstly a postcode, done a lookup, then asked for a door number and street. This then rendered another webpage with embedded js to gather the results. However I noticed that there was a since parameter on the final rendered page a <a href=https://www.geoplace.co.uk/addresses-streets/location-data/the-uprn><strong>UPRN</strong></a>. To Google! Turns out this identifies a single property.</p>
+<h2 id=hardware>Hardware</h2>
+<p>Below is a simplified wiring diagram for the LED&rsquo;s and resistors to have light output from the Harlow Bindicator. The Ground is connected to the Raspberry Pi <strong>3.3</strong> Volt Ground. While the activity LED is connected to Pin <strong>26</strong>. The Bin Day LED is connected to Pin <strong>2</strong>. The Recycling Bin LED is connected to Pin <strong>3</strong> and the Landfill Bin LED is connected to Pin <strong>4</strong>. If you don&rsquo;t want to have a flashing LED to indicate that the script is running, then just don&rsquo;t wire in the Activity LED.</p>
+<p><img src=pinout.png alt="Image alt text"></p>
+<p><em>note: The food waste caddy has not been wired in as every week this is collected regardless of the wheelie bin being collected.</em></p>
+<h2 id=required-binaries>Required Binaries</h2>
+<p>Before running this script on a Raspberry Pi, there are a few steps to complete. Firstly you&rsquo;ll need to install a chromium browser as well as a chrome web driver for selium to use.</p>
+<p>On the Raspberry Pi terminal run the following:</p>
+<script src="https://gist.github.com/joseph-mccarthy/5848fa31ae07b22277201ea3a0defe52.js?file=install-chromium.sh"></script>
+<p>Running the above will update the distribution lists, then install the chromium browser and then the correct chrome driver. To ensure that the above steps have completed enter the following and check that both <strong>chromediver</strong> and <strong>chromium_browser</strong> are present.</p>
+<script src="https://gist.github.com/joseph-mccarthy/5848fa31ae07b22277201ea3a0defe52.js?file=check-chromium.sh"></script>
+<h2 id=setting-up-harlow-bindicator>Setting Up Harlow Bindicator</h2>
+<p>Firstly clone down the repository to the desired location on your Raspberry Pi.</p>
+<script src="https://gist.github.com/joseph-mccarthy/5848fa31ae07b22277201ea3a0defe52.js?file=clone-bindicator.sh"></script>
+<p>Create a Python virtual environment for the script to run within. Then activate the environment and install the required packages for the Harlow Bindicator Script.</p>
+<script src="https://gist.github.com/joseph-mccarthy/5848fa31ae07b22277201ea3a0defe52.js?file=python-venv.sh"></script>
+<h2 id=running-harlow-bindicator>Running Harlow Bindicator</h2>
+<p>The Raspberry Pi is now configured and ready to start running the Harlow Bindicator and making your bin day easier. There is just one final parameter that&rsquo;s needed for the script which is personal to you. This is the <strong>UPRN</strong> (<em>Unique Property Reference Number</em>), this is needed for the script in order to work out when bin day is for an address. If this makes you feel uncomfortable, feel free to put in the the UPRN for someone at least in your street.</p>
+<h3 id=finding-your-uprn>Finding your UPRN</h3>
+<p>In order to find the UPRN for your property there is a rather helpful website <a href=https://www.findmyaddress.co.uk/search><strong>findmyaddress.co.uk</strong></a> which I used to find mine based on street name and door number. Once you have got the UPRN make a note of it and keep it to one side.</p>
+<h3 id=starting-harlow-bindicator>Starting Harlow Bindicator</h3>
+<p>You&rsquo;re now ready to run the Harlow Bindicator Script, by entering the following command.</p>
+<script src="https://gist.github.com/joseph-mccarthy/5848fa31ae07b22277201ea3a0defe52.js?file=run-bindicator.sh"></script>
+<p>You should now start seeing output from the script to confirm that it&rsquo;s active. If you also followed the hardware guide, the activity light should also be flashing.</p>
 <div class="row mt-5 mb-3">
 <div class="col-6 text-left">
-<a class="btn btn-primary btn-lg col-12" href=https://joseph-mccarthy.github.io/posts/harlow-bindicator/><span class=h1>&#8592;</span></a>
+<a class="btn btn-light btn-lg col-12 disabled" href=#><span class=h1>&#8592;</span></a>
 </div>
 <div class="col-6 text-right">
-<a class="btn btn-primary btn-lg col-12" href=https://joseph-mccarthy.github.io/posts/pi-400/><span class=h1>&#8594;</span></a>
+<a class="btn btn-primary btn-lg col-12" href=https://joseph-mccarthy.github.io/posts/new-project-light-meter-py/><span class=h1>&#8594;</span></a>
 </div>
 </div>
 </div> </section>
@@ -73,8 +99,8 @@ Menu
 <h4 class="mb-3 widget-title">Latest Posts</h4>
 <ul class=list-unstyled>
 <li class="d-flex my-1">
-<a href=https://joseph-mccarthy.github.io/posts/harlow-bindicator/>
-<h5>Harlow Bindicator</h5>
+<a href=https://joseph-mccarthy.github.io/posts/new-project-light-meter-py/>
+<h5>New Project Light Meter Py</h5>
 </a>
 </li>
 <li class="d-flex my-1">
@@ -98,13 +124,13 @@ Menu
 </a>
 </li>
 <li class="d-flex my-1">
-<a href=https://joseph-mccarthy.github.io/posts/harlow-bindicator/>
-<h5>Harlow Bindicator</h5>
+<a href=https://joseph-mccarthy.github.io/posts/new-project-light-meter-py/>
+<h5>New Project Light Meter Py</h5>
 </a>
 </li>
 <li class="d-flex my-1">
-<a href=https://joseph-mccarthy.github.io/posts/first-completed-project/>
-<h5>First Completed Project</h5>
+<a href=https://joseph-mccarthy.github.io/devlogs/night-sky-pi/>
+<h5>Night Sky Pi Devlog</h5>
 </a>
 </li>
 </ul>
