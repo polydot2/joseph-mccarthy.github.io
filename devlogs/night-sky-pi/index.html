@@ -12,7 +12,7 @@
 <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
 <meta name=description content>
 <meta name=author content>
-<title>Joseph McCarthy</title>
+<title>Joe McCarthy</title>
 <link rel=icon type=image/x-icon href=/favicon.ico>
 <script src=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA==" crossorigin=anonymous referrerpolicy=no-referrer></script> <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel=stylesheet type=text/css>
 <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel=stylesheet type=text/css>
@@ -22,16 +22,16 @@
 <body id=page-top>
 <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id=mainNav>
 <div class=container>
-<a class=navbar-brand href=/>Joseph McCarthy</a>
+<a class=navbar-brand href=/>Joe McCarthy</a>
 <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type=button data-bs-toggle=collapse data-bs-target=#navbarResponsive aria-controls=navbarResponsive aria-expanded=false aria-label="Toggle navigation">
 Menu
 <em class="fas fa-bars"></em>
 </button>
 <div class="collapse navbar-collapse" id=navbarResponsive>
 <ul class="navbar-nav ms-auto">
-<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href=https://joseph-mccarthy.github.io/devlogs/> Devlogs </a>
-<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href=https://joseph-mccarthy.github.io/posts/> Posts </a>
-<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href=https://joseph-mccarthy.github.io/projects/> Projects </a>
+<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href=https://joemccarthy.co.uk/devlogs/> Devlogs </a>
+<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href=https://joemccarthy.co.uk/posts/> Posts </a>
+<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href=https://joemccarthy.co.uk/projects/> Projects </a>
 </ul>
 </div>
 </div>
@@ -40,7 +40,7 @@ Menu
 <div class="container pb-5">
 <div class=row>
 <section class="page-section portfolio col-12 col-lg-10">
-<img class=card-img-top src=https://joseph-mccarthy.github.io/devlogs/night-sky-pi/hero.png alt>
+<img class=card-img-top src=https://joemccarthy.co.uk/devlogs/night-sky-pi/hero.png alt>
 <h2 class="page-section-heading text-center text-uppercase text-secondary mt-5">Night Sky Pi Devlog</h2>
 <div class="divider-custom m-0">
 <div class=divider-custom-line></div>
@@ -85,7 +85,7 @@ Menu
 <p>The arguements being passed is the latitude and longitude of the camera, which are required for this program to execute. Then an optional debug level, which defaults to <strong>WARNING</strong>, this just allows me to quickly debug the application while I develop it.</p>
 <hr>
 <h2 id=30032022>30/03/2022</h2>
-<p>So today I didn&rsquo;t do much in features or extending the code base to the end goal, as I was playing clean up on my previous cowboy work. So tonight I spent the evening unit testing the functions that I have already written which isn&rsquo;t great, I should have written the tests first, and saved the time. I was also distracted because I wrote a post about <a href=https://joseph-mccarthy.github.io/posts/github-sponsers/><strong>GitHub Sponsers</strong></a>, which in my opinion is a great way to support open source. So carrying on with the unit testing of what I had previously done, I&rsquo;m now up to <strong>53%</strong> coverage, which is not a bad start.</p>
+<p>So today I didn&rsquo;t do much in features or extending the code base to the end goal, as I was playing clean up on my previous cowboy work. So tonight I spent the evening unit testing the functions that I have already written which isn&rsquo;t great, I should have written the tests first, and saved the time. I was also distracted because I wrote a post about <a href=https://joemccarthy.co.uk/posts/github-sponsers/><strong>GitHub Sponsers</strong></a>, which in my opinion is a great way to support open source. So carrying on with the unit testing of what I had previously done, I&rsquo;m now up to <strong>53%</strong> coverage, which is not a bad start.</p>
 <p>For the testing of the time_functions I had to do a little bit of refactoring as I wasn&rsquo;t able to mock the datetime module. So I have added _<strong>get_now()</strong> which only returns the current datetime.</p>
 <script src="https://gist.github.com/joseph-mccarthy/513a0b2dbf7c10ec9bd56615162f06d6.js?file=now.py"></script>
 <p>This allowed me to write predictable unit tests for my time_functions as I was able to mock out this method within my module. As this method calls upon the core python library of datetime, there is really no need to test it. With this being mocked I was able to test the other methods within the module to ensure expected results.</p>
@@ -147,20 +147,20 @@ Menu
 </div>
 <hr>
 <h2 id=19092022>19/09/2022</h2>
-<p>There has been some exciting progress since the time lapse a few days ago. I had a trip to the Cambridge <a href=https://joseph-mccarthy.github.io/posts/pi-shopping/><strong>Raspberry Pi Shop</strong></a> and purchased a Raspberry Pi 4. The intention of this device is to connect it to the Raspberry Pi HQ Camera Module and this be the test hardware I use for this project going forward.</p>
+<p>There has been some exciting progress since the time lapse a few days ago. I had a trip to the Cambridge <a href=https://joemccarthy.co.uk/posts/pi-shopping/><strong>Raspberry Pi Shop</strong></a> and purchased a Raspberry Pi 4. The intention of this device is to connect it to the Raspberry Pi HQ Camera Module and this be the test hardware I use for this project going forward.</p>
 <p>This comes with some extra challenges that I haven&rsquo;t had to face yet, however knew were coming. Currently the project has been using a web camera, which is configured by the camera id, linking to the usb video id within the OS. But the Pi Camera, uses the CSI interface, and has far more options that the web camera was able to provide. For example with the web camera I was using OpenCV-Python to capture the frame, this gave me no control over the exposure of the image, as it was basically a frame from a video feed.</p>
 <p>Now the Pi HQ camera uses <a href=https://www.libcamera.org/><strong>libcamera</strong></a> on bullseye. This means that I have to call an external command line to capture an image, as there isn&rsquo;t a python wrapper for it at the moment, however you can follow beta the progress <a href=https://github.com/raspberrypi/picamera2><strong>here on GitHub</strong></a>. Once this is release I will be refactoring the application to use that, as it will probably be simplier going forward.</p>
 <p>Now that I can control exposure this raises another issue, I have to determine if an image is correctly exposed. This raises many questions as there are a few ways to measure exposure, I could do an entire post on it which I think I will at some point. However I have got a rough, hacky process in place while I iron out the details.</p>
 <p>So when starting up Night Sky Pi, the camera id can be set to -1, to indicate that we want to use the CSI camera interface. This is due to zero or more being valid usb device identifiers. Using -1 will create a new camera instance, and therefore use <a href=https://www.libcamera.org/><strong>libcamera</strong></a> to capture images. Once an image has been captured, the I use numpy to determine the entire average light value after converting to grayscale. If the returned value is in the range 110-135 then this is considered acceptable and no alterations are done to the exposure value of the next image.</p>
 <p>This has worked in principle, but it&rsquo;s rather rough around the edges causing the exposure to jump around between frames. Also this is taking the entire frame into account, which I believe is the reason for the jumps. I need to adapt this to either use <a href=https://en.wikipedia.org/wiki/Metering_mode#Spot_metering><strong>spot metering</strong></a> or <a href=https://en.wikipedia.org/wiki/Metering_mode#Center-weighted_average_metering><strong>center weighted</strong></a> which is a more reasonible approach to image exposure. However that&rsquo;s for another udate.</p>
 <h2 id=22092022>22/09/2022</h2>
-<p>Following the issues that I had on the <strong>19/09/2022</strong> I&rsquo;ve started another project in an attempt to resolve it. It&rsquo;s a python module that emulates the behavour of a camera light meter. I&rsquo;ve created the repository on <a href=https://github.com/joseph-mccarthy/lightmeter-py><strong>GitHub</strong></a> and have also created a <a href=https://joseph-mccarthy.github.io/devlogs/lightmeter-py/><strong>developer log</strong></a> to track and discuss it&rsquo;s progress and details.</p>
+<p>Following the issues that I had on the <strong>19/09/2022</strong> I&rsquo;ve started another project in an attempt to resolve it. It&rsquo;s a python module that emulates the behavour of a camera light meter. I&rsquo;ve created the repository on <a href=https://github.com/joseph-mccarthy/lightmeter-py><strong>GitHub</strong></a> and have also created a <a href=https://joemccarthy.co.uk/devlogs/lightmeter-py/><strong>developer log</strong></a> to track and discuss it&rsquo;s progress and details.</p>
 <div class="row mt-5 mb-3">
 <div class="col-6 text-left">
 <a class="btn btn-light btn-lg col-12 disabled" href=#><span class=h1>&#8592;</span></a>
 </div>
 <div class="col-6 text-right">
-<a class="btn btn-primary btn-lg col-12" href=https://joseph-mccarthy.github.io/devlogs/lightmeter-py/><span class=h1>&#8594;</span></a>
+<a class="btn btn-primary btn-lg col-12" href=https://joemccarthy.co.uk/devlogs/lightmeter-py/><span class=h1>&#8594;</span></a>
 </div>
 </div>
 </div> </section>
@@ -170,17 +170,17 @@ Menu
 <h4 class="mb-3 widget-title">Latest Posts</h4>
 <ul class=list-unstyled>
 <li class="d-flex my-1">
-<a href=https://joseph-mccarthy.github.io/posts/free-lancer-in-themes-library/>
+<a href=https://joemccarthy.co.uk/posts/free-lancer-in-themes-library/>
 <h5>Free Lancer in Themes Library</h5>
 </a>
 </li>
 <li class="d-flex my-1">
-<a href=https://joseph-mccarthy.github.io/posts/harlow-bindicator/>
+<a href=https://joemccarthy.co.uk/posts/harlow-bindicator/>
 <h5>Harlow Bindicator</h5>
 </a>
 </li>
 <li class="d-flex my-1">
-<a href=https://joseph-mccarthy.github.io/posts/new-project-light-meter-py/>
+<a href=https://joemccarthy.co.uk/posts/new-project-light-meter-py/>
 <h5>New Project Light Meter Py</h5>
 </a>
 </li>
@@ -190,17 +190,17 @@ Menu
 <h4 class="mb-3 widget-title">Related Posts</h4>
 <ul class=list-unstyled>
 <li class="d-flex my-1">
-<a href=https://joseph-mccarthy.github.io/posts/harlow-bindicator/>
+<a href=https://joemccarthy.co.uk/posts/harlow-bindicator/>
 <h5>Harlow Bindicator</h5>
 </a>
 </li>
 <li class="d-flex my-1">
-<a href=https://joseph-mccarthy.github.io/devlogs/hugo-freelance/>
+<a href=https://joemccarthy.co.uk/devlogs/hugo-freelance/>
 <h5>Hugo Freelance Devlog</h5>
 </a>
 </li>
 <li class="d-flex my-1">
-<a href=https://joseph-mccarthy.github.io/posts/night-sky-pi-first-timelapse/>
+<a href=https://joemccarthy.co.uk/posts/night-sky-pi-first-timelapse/>
 <h5>Night Sky Pi First Timelapse</h5>
 </a>
 </li>
@@ -236,7 +236,7 @@ Freelance is a free to use, MIT licensed Bootstrap theme created by
 </div>
 </footer>
 <div class="copyright py-4 text-center text-white">
-<div class=container><small>Copyright &copy; Joseph McCarthy 2022</small></div>
+<div class=container><small>Copyright &copy; Joe McCarthy 2022</small></div>
 </div>
 <script src=https://cdn.startbootstrap.com/sb-forms-latest.js></script>
 </body>
@@ -256,7 +256,7 @@ Freelance is a free to use, MIT licensed Bootstrap theme created by
 </div>
 <img class="img-fluid rounded mb-5" src=/projects/hugo-freelance/hero.png alt=...>
 <p class=mb-4>I wanted to use Hugo and I wanted Bootstrap Freelance. So here it is.</p>
-<a href=https://joseph-mccarthy.github.io/projects/hugo-freelance/ class="btn btn-primary btn-lg col-12">Read More</a>
+<a href=https://joemccarthy.co.uk/projects/hugo-freelance/ class="btn btn-primary btn-lg col-12">Read More</a>
 </div>
 </div>
 </div>
@@ -280,7 +280,7 @@ Freelance is a free to use, MIT licensed Bootstrap theme created by
 </div>
 <img class="img-fluid rounded mb-5" src=/projects/internet-monitor/hero.png alt=...>
 <p class=mb-4>Small and simple application to keep my ISP honest.</p>
-<a href=https://joseph-mccarthy.github.io/projects/internet-monitor/ class="btn btn-primary btn-lg col-12">Read More</a>
+<a href=https://joemccarthy.co.uk/projects/internet-monitor/ class="btn btn-primary btn-lg col-12">Read More</a>
 </div>
 </div>
 </div>
