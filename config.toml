@@ -1,6 +1,6 @@
-baseURL = 'https://joseph-mccarthy.github.io'
+baseURL = 'https://joemccarthy.co.uk'
 languageCode = 'en-us'
-title = 'Joseph McCarthy'
+title = 'Joe McCarthy'
 
 theme = "freelancer"
 summaryLength=40
