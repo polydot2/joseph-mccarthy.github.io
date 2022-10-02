@@ -3,7 +3,7 @@
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta http-equiv=x-ua-compatible content="IE=edge">
-<title>Pi Pick Up</title>
+<title>Python Simple MQTT</title>
 <link rel=stylesheet href=/css/style.css>
 </head>
 <body>
@@ -40,8 +40,8 @@ Menu
 <div class="container pb-5">
 <div class=row>
 <section class="page-section portfolio col-12 col-lg-10">
-<img class=card-img-top src=https://joemccarthy.co.uk/posts/pi-pick-up/hero.png alt>
-<h2 class="page-section-heading text-center text-uppercase text-secondary mt-5">Pi Pick Up</h2>
+<img class=card-img-top src=https://joemccarthy.co.uk/posts/python-simple-mqtt/hero.png alt>
+<h2 class="page-section-heading text-center text-uppercase text-secondary mt-5">Python Simple MQTT</h2>
 <div class="divider-custom m-0">
 <div class=divider-custom-line></div>
 <div class=divider-custom-icon><em class="fas fa-star"></em></div>
@@ -49,21 +49,25 @@ Menu
 </div>
 <div class="row mb-3">
 <div class="col text-center text-nowrap">
-<a class=h4 href=/tags/new-toys/ title="New Toys"><span class="badge bg-primary p-2 m-1">New Toys</span></a>
-<a class=h4 href=/tags/raspberry-pi/ title="Raspberry Pi"><span class="badge bg-primary p-2 m-1">Raspberry Pi</span></a>
-<a class=h4 href=/tags/shopping/ title=Shopping><span class="badge bg-primary p-2 m-1">Shopping</span></a>
+<a class=h4 href=/tags/module/ title=Module><span class="badge bg-primary p-2 m-1">Module</span></a>
+<a class=h4 href=/tags/mqtt/ title=MQTT><span class="badge bg-primary p-2 m-1">MQTT</span></a>
+<a class=h4 href=/tags/python/ title=Python><span class="badge bg-primary p-2 m-1">Python</span></a>
 </div>
 </div>
 <div class="row justify-content-left">
-<p>So the other week I made my way to Cambridge to visit the Rasberry Pi store. Hoping to get some new toys, as we all know they are impossible to buy anywhere and if you do find them, well expect to pay two or three times what the retail price should be. Well I was in luck, I managed to walk away with a Pi4 8Gb, and a Pi Zero 2W, along with a few accessories. I would have loved to purchase a few more, however for obvious reasons there is a limit per customer.</p>
-<p>So the Pi Zero I have been wanting to get for a while. This is to be my night sky camera, as it&rsquo;s small and low powered. I also picked up the case for it as well as the camera module. I hope to start work on this soon, as it&rsquo;s been something I have been wanting to make for a while now.</p>
-<p>The Pi 4 is to join my other Pi on the network for running various little jobs. I plan to install Open Media Vault on this and then use this with a few drives for a simple network attached storage. Alone with having OMV installed on it, I&rsquo;ll also spin up Portainer to manage docker images. As I plan to get some monitoring going on the network using Grafana and Promethus. Having not used any of these applications I suspect there&rsquo;s going to be a learning curve and look forward to it.</p>
+<p>I&rsquo;m starting to use Raspberry Pi for a lot of simple tasks around the home and give me notfications. So I thought it was about time to look into message brokers and MQTT is the way to go. So instead of just throwing the implmentation into a project of mine. I thought it would be more useful to create a seriously simple example project that just publishes a random number to a topic and another that subscribes to it. The two files publish.py and subscribe.py are both heavily commented with what basically each line is doing. So it&rsquo;s simple to follow. The source code is avaliable on my <a href=https://github.com/joseph-mccarthy/simple-python-mqtt-example><strong>GitHub</strong></a>.</p>
+<h2 id=brokers>Brokers</h2>
+<p>In order to publish and subscribe to messages you&rsquo;ll require a broker. The code examples are currently set to use a free example from HiveMQ. If you are going to use HiveMQ free public broker <strong>please remember that it&rsquo;s public and don&rsquo;t share sensitive information</strong>. I&rsquo;m personally using <a href=https://github.com/eclipse/mosquitto><strong>Mosquitto</strong></a> as my broker on the network, running on a Raspberry Pi (Obviously).</p>
+<h3 id=installing-mosquitto-raspberry-pi>Installing Mosquitto (Raspberry Pi)</h3>
+<p>Mosquitto is already avaliable in the standard distribution so it&rsquo;s just a case of:</p>
+<script src=https://gist.github.com/joseph-mccarthy/ae83cd289979371a8fb6cbb4d0733577.js></script>
+<p>This will default to always be running using port <strong>1883</strong>. That&rsquo;s all the set up that I needed to get this demo working, although the <a href=https://mosquitto.org/documentation/><strong>documentation</strong></a> is great for Mosquitto.</p>
 <div class="row mt-5 mb-3">
 <div class="col-6 text-left">
-<a class="btn btn-primary btn-lg col-12" href=https://joemccarthy.co.uk/posts/github-sponsers/><span class=h1>&#8592;</span></a>
+<a class="btn btn-light btn-lg col-12 disabled" href=#><span class=h1>&#8592;</span></a>
 </div>
 <div class="col-6 text-right">
-<a class="btn btn-primary btn-lg col-12" href=https://joemccarthy.co.uk/posts/pi-hole/><span class=h1>&#8594;</span></a>
+<a class="btn btn-primary btn-lg col-12" href=https://joemccarthy.co.uk/posts/free-lancer-in-themes-library/><span class=h1>&#8594;</span></a>
 </div>
 </div>
 </div> </section>
@@ -72,11 +76,6 @@ Menu
 <div class="widget pt-3">
 <h4 class="mb-3 widget-title">Latest Posts</h4>
 <ul class=list-unstyled>
-<li class="d-flex my-1">
-<a href=https://joemccarthy.co.uk/posts/python-simple-mqtt/>
-<h5>Python Simple MQTT</h5>
-</a>
-</li>
 <li class="d-flex my-1">
 <a href=https://joemccarthy.co.uk/posts/free-lancer-in-themes-library/>
 <h5>Free Lancer in Themes Library</h5>
@@ -87,14 +86,19 @@ Menu
 <h5>Harlow Bindicator</h5>
 </a>
 </li>
+<li class="d-flex my-1">
+<a href=https://joemccarthy.co.uk/posts/new-project-light-meter-py/>
+<h5>New Project Light Meter Py</h5>
+</a>
+</li>
 </ul>
 </div>
 <div class="widget pt-3">
 <h4 class="mb-3 widget-title">Related Posts</h4>
 <ul class=list-unstyled>
 <li class="d-flex my-1">
-<a href=https://joemccarthy.co.uk/posts/pi-shopping/>
-<h5>Pi Shopping</h5>
+<a href=https://joemccarthy.co.uk/posts/python-suntime-module/>
+<h5>Python Suntime Module</h5>
 </a>
 </li>
 <li class="d-flex my-1">
@@ -103,8 +107,8 @@ Menu
 </a>
 </li>
 <li class="d-flex my-1">
-<a href=https://joemccarthy.co.uk/devlogs/night-sky-pi/>
-<h5>Night Sky Pi Devlog</h5>
+<a href=https://joemccarthy.co.uk/posts/new-project-light-meter-py/>
+<h5>New Project Light Meter Py</h5>
 </a>
 </li>
 </ul>
