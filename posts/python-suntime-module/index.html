@@ -29,7 +29,6 @@ Menu
 </button>
 <div class="collapse navbar-collapse" id=navbarResponsive>
 <ul class="navbar-nav ms-auto">
-<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href=https://joseph-mccarthy.github.io/devlogs/> Devlogs </a>
 <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href=https://joseph-mccarthy.github.io/posts/> Posts </a>
 <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href=https://joseph-mccarthy.github.io/projects/> Projects </a>
 </ul>
@@ -54,7 +53,7 @@ Menu
 </div>
 </div>
 <div class="row justify-content-left">
-<p>So while working on the <a href=https://joseph-mccarthy.github.io/devlogs/night-sky-pi/>night sky pi</a> I needed a way to get the sunrise and sunset for dates. Firstly I thought I should use a webservice, however I really didn&rsquo;t like the fact of making more rest calls than I really needed to. Also there could be a possibiliy that device might run somewhere without a connection or reliable one at that. So I had to look elsewhere. This is when I came across the suntime python module on <a href=https://pypi.org/project/suntime/>pypi</a>.</p>
+<p>So while working on the <a href=https://github.com/joseph-mccarthy/night-sky-pi><strong>Night Sky Pi</strong></a> I needed a way to get the sunrise and sunset for dates. Firstly I thought I should use a webservice, however I really didn&rsquo;t like the fact of making more rest calls than I really needed to. Also there could be a possibiliy that device might run somewhere without a connection or reliable one at that. So I had to look elsewhere. This is when I came across the suntime python module on <a href=https://pypi.org/project/suntime/>pypi</a>.</p>
 <p>The module is really simple and clean to use. The only requirement in order to use the module is to create an instance of the Sun class passing in the latitude and longitude that you want the sunrise and sunset information from.</p>
 <script src="https://gist.github.com/joseph-mccarthy/acd300383c255e68b026d3e70869aea7.js?file=sun.py"></script>
 <p>Above is the most simple usecase for the module, just getting the sunrise and sunset for today. If no date is passed in then todays date is defaulted. When calling this method it will return the datetime of both the sunrise and sunset as UTC rather than local time. Obviously if you pass a datetime into the methods it will return you the sunrise and sunset for that date.</p>
