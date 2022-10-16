@@ -1,7 +1,7 @@
 ---
 title: "Lightmeter Py"
 date: 2022-09-20T18:55:03+01:00
-draft: false
+draft: true
 sidebar: true
 tags: [Paython, OpenCV, Numpy, Light Meter Py]
 hero: "hero.png"

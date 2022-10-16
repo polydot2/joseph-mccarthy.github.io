@@ -1,7 +1,7 @@
 ---
 title: "Hugo Freelance Devlog"
 date: 2022-09-16T20:02:03+01:00
-draft: false
+draft: true
 sidebar: true
 tags: [Bootstrap, Freelancer, Hugo, Developer Log,Project]
 hero: "hero.png"

@@ -9,7 +9,7 @@ summary: "Module to calculate Sunrises and Sunsets for a given location a date."
 images: "hero.png"
 ---
 
-So while working on the [night sky pi]({{< ref "/devlogs/night-sky-pi" >}}) I needed a way to get the sunrise and sunset for dates. Firstly I thought I should use a webservice, however I really didn't like the fact of making more rest calls than I really needed to. Also there could be a possibiliy that device might run somewhere without a connection or reliable one at that. So I had to look elsewhere. This is when I came across the suntime python module on [pypi](https://pypi.org/project/suntime/).
+So while working on the [__Night Sky Pi__](https://github.com/joseph-mccarthy/night-sky-pi) I needed a way to get the sunrise and sunset for dates. Firstly I thought I should use a webservice, however I really didn't like the fact of making more rest calls than I really needed to. Also there could be a possibiliy that device might run somewhere without a connection or reliable one at that. So I had to look elsewhere. This is when I came across the suntime python module on [pypi](https://pypi.org/project/suntime/).
 
 The module is really simple and clean to use. The only requirement in order to use the module is to create an instance of the Sun class passing in the latitude and longitude that you want the sunrise and sunset information from.
 
