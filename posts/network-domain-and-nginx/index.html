@@ -3,7 +3,7 @@
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta http-equiv=x-ua-compatible content="IE=edge">
-<title>Compulsory Hello World</title>
+<title>Network Domain and Nginx</title>
 <link rel=stylesheet href=/css/style.css>
 </head>
 <body>
@@ -39,8 +39,8 @@ Menu
 <div class="container pb-5">
 <div class=row>
 <section class="page-section portfolio col-12 col-lg-10">
-<img class=card-img-top src=https://joseph-mccarthy.github.io/posts/hello-world/hero.png alt>
-<h2 class="page-section-heading text-center text-uppercase text-secondary mt-5">Compulsory Hello World</h2>
+<img class=card-img-top src=https://joseph-mccarthy.github.io/posts/network-domain-and-nginx/hero.png alt>
+<h2 class="page-section-heading text-center text-uppercase text-secondary mt-5">Network Domain and Nginx</h2>
 <div class="divider-custom m-0">
 <div class=divider-custom-line></div>
 <div class=divider-custom-icon><em class="fas fa-star"></em></div>
@@ -48,21 +48,49 @@ Menu
 </div>
 <div class="row mb-3">
 <div class="col text-center text-nowrap">
-<a class=h4 href=/tags/ramble/ title=Ramble><span class="badge bg-primary p-2 m-1">Ramble</span></a>
-<a class=h4 href=/tags/random/ title=Random><span class="badge bg-primary p-2 m-1">Random</span></a>
+<a class=h4 href=/tags/home-lab/ title="home lab"><span class="badge bg-primary p-2 m-1">home lab</span></a>
+<a class=h4 href=/tags/network/ title=network><span class="badge bg-primary p-2 m-1">network</span></a>
 </div>
 </div>
 <div class="row justify-content-left">
-<p>Hello, and welcome to my little slice of the internet. Here is the place to be. That is if you&rsquo;re interested in what I&rsquo;m working on or trying to get working. I thought it was about time to focus on growing as a Software Engineer by trying new things. The best way is to write down what I&rsquo;ve done so I can learn from my mistakes. As well as celebrate the little victories I achieve. The site will probably be incoherent and full of grammar and spelling mistakes. Writing is another goal of mine to improve. This site is my notebook for me to reflect on in the time to come.</p>
-<p>So about me. I&rsquo;m employed full-time as a Software-Engineer, who doesn&rsquo;t get to write as much code as I would like. So have to find my fix elsewhere. Therefore, I&rsquo;ve thrown myself at some personal projects on <a href=https://github.com/joseph-mccarthy><strong>GitHub</strong></a> and started this site. Day to day at work, when getting to code, the language of choice is Java. However, I&rsquo;ve set a goal to get more comfortable with Python. Which the majority of the projects I&rsquo;ll attempt will be using.</p>
-<p>I also have a young son. He has shown an interest in robots and computers, so I want to start creating some STEM projects to encourage him. These escapades will get documented here. He asks what I&rsquo;m doing on the laptop or when I&rsquo;m messing around with Raspberry Pis. With the amount of curiosity that he has, I have to find ways to keep that going. So it may be of interest to some.</p>
-<p>Another thought I&rsquo;ve had is possibly documenting other areas of my life. Expanding the theme and not keeping this site just software and electronics. That&rsquo;s not the intention at the moment, but best to see what comes up. But it&rsquo;s a consideration that I&rsquo;ve had. Another topic that could come up is photography. Which I&rsquo;m rather <a href=https://www.instagram.com/grist_frames/><strong>passionate</strong></a> about, and the genre I love is Street photography, using my camera of choice, the Richo GR3.</p>
+<p>Today I&rsquo;ve been playing around with adding a domain name to the machines on my local network. This is with the goal of making things more formal and eventually opening up services to the internet and setting up SSL. First I thought I&rsquo;d start with a simple one which is my Raspberry Pi I used to hold data and grafanna. This is called data for the host name. To set a domain name I will be using the local DNS within <a href=https://joseph-mccarthy.github.io/posts/pi-hole/><strong>Pi-Hole</strong></a> as that&rsquo;s already on my network. The first step is to reserve the ip address for the machine. This is done through Pi-Hole as well as I actively use this as my DCHP server in order for <a href=https://joseph-mccarthy.github.io/posts/pi-hole/><strong>Pi-Hole</strong></a> to work due to limitations of my Virgin Router.</p>
+<figure class=figure>
+<img src=reserve-ip.png class="figure-img img-fluid rounded" alt=reserve-ip title=reserve-ip>
+<figcaption class=figure-caption></figcaption>
+</figure>
+<p>Once the IP has been reserved for data.local I can then move on to assigning a domain to it. This will allow me to enter the full domain into a web browser and make life a lot easier when accessing applications outside of the home network eventually.</p>
+<figure class=figure>
+<img src=adding-domain.png class="figure-img img-fluid rounded" alt="adding a domain" title="adding a domain">
+<figcaption class=figure-caption></figcaption>
+</figure>
+<p>This is why it was important to reserve the ip address for the machine with the hostname <strong>data</strong> as the DNS entry is marked against a perticular ip address. Therefore we don&rsquo;t want he ip address to change if <strong>data</strong> was to restart at some point. I&rsquo;m now at a point where I can get to data by entering data.joemccarthy.co.uk. However there is an annoying thing which is that I don&rsquo;t want to keep putting port numbers in everywhere. So for example on <strong>data.joemccarthy.co.uk</strong> is where I run Grafana. This runs on port 3000, and simply chaning this to port 80 is not as easy as it sounds. Also that&rsquo;s not really a solution either, as this would mean that I can only run a single application on a single machine. This isn&rsquo;t a great use of the hardware and forward thinking.</p>
+<p>So to get round this I&rsquo;ll be using NGINX as a proxy. This will allow me to run multiple things on different ports while all accessing them via port 80 at <strong>data.joemccarthy.co.uk</strong>. I&rsquo;ll be using sublocations to achieve this, so the plan is to access grafana by entering <strong>data.joemccarthy.co.uk/grafana</strong>. The first step is to install nginx. Before doing that it&rsquo;s always best to do an update and upgrade</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>sudo apt update
+sudo apt upgrade -y
+</code></pre></div><p>It is extremely easy to install NGINX with the apt repository. Just run the command below and it will be ready!</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>sudo apt install nginx
+</code></pre></div><p>Then just start it</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>sudo /etc/init.d/nginx start
+</code></pre></div><p>Once the nginx has started I head over to <strong>data.joemccarthy.co.uk</strong> to make sure that I&rsquo;m greated with the default well to nginx bluff. The next job is to go and configure the location for nginx to forward to grafana. This is done inside the configuration file containted in <strong>sites_enabled</strong></p>
+<div class=highlight><pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>location /grafana/ {
+    rewrite ^/route/?(.*)$ /$1 break;
+    proxy_pass  http://127.0.0.1:3000;
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+  }
+</code></pre></div><p>Adding the above states for the given sublocation rewrite the request forwaring to same machine on port 3000 and pass along the request headers. With that being done and a quick restart of nginx I head over to <strong>data.joemccarthy.co.uk</strong> to give it a test.</p>
+<figure class=figure>
+<img src=grafana.png class="figure-img img-fluid rounded" alt=Configured title=Configured>
+<figcaption class=figure-caption></figcaption>
+</figure>
+<p>Yay, it works. Going to leave it there for now.</p>
 <div class="row mt-5 mb-3">
 <div class="col-6 text-left">
-<a class="btn btn-primary btn-lg col-12" href=https://joseph-mccarthy.github.io/posts/first-completed-project/><span class=h1>&#8592;</span></a>
+<a class="btn btn-light btn-lg col-12 disabled" href=#><span class=h1>&#8592;</span></a>
 </div>
 <div class="col-6 text-right">
-<a class="btn btn-light disabled btn-lg col-12" href=#><span class=h1>&#8594;</span></a>
+<a class="btn btn-primary btn-lg col-12" href=https://joseph-mccarthy.github.io/posts/python-simple-mqtt/><span class=h1>&#8594;</span></a>
 </div>
 </div>
 </div> </section>
@@ -72,11 +100,6 @@ Menu
 <h4 class="mb-3 widget-title">Latest Posts</h4>
 <ul class=list-unstyled>
 <li class="d-flex my-1">
-<a href=https://joseph-mccarthy.github.io/posts/network-domain-and-nginx/>
-<h5>Network Domain and Nginx</h5>
-</a>
-</li>
-<li class="d-flex my-1">
 <a href=https://joseph-mccarthy.github.io/posts/python-simple-mqtt/>
 <h5>Python Simple MQTT</h5>
 </a>
@@ -84,6 +107,11 @@ Menu
 <li class="d-flex my-1">
 <a href=https://joseph-mccarthy.github.io/posts/free-lancer-in-themes-library/>
 <h5>Free Lancer in Themes Library</h5>
+</a>
+</li>
+<li class="d-flex my-1">
+<a href=https://joseph-mccarthy.github.io/posts/harlow-bindicator/>
+<h5>Harlow Bindicator</h5>
 </a>
 </li>
 </ul>
